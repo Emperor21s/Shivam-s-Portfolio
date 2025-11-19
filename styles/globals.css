@@ -2,6 +2,32 @@
 
 @import 'tailwindcss';
 
+:root {
+    --color-background: #f5f7fb;
+    --color-surface: #ffffff;
+    --color-elevated: #f0f4ff;
+    --color-glass: rgba(245, 247, 251, 0.9);
+    --color-heading: #0f172a;
+    --color-text: #1f2937;
+    --color-muted: #5f6b7c;
+    --color-border: rgba(15, 23, 42, 0.1);
+    --color-accent: #2563eb;
+    --color-on-accent: #f8fafc;
+}
+
+:root[data-theme='dark'] {
+    --color-background: #030014;
+    --color-surface: #0f172a;
+    --color-elevated: #131c35;
+    --color-glass: rgba(3, 0, 20, 0.85);
+    --color-heading: #f8fafc;
+    --color-text: #c7d2fe;
+    --color-muted: #94a3b8;
+    --color-border: rgba(148, 163, 184, 0.25);
+    --color-accent: #38bdf8;
+    --color-on-accent: #04111f;
+}
+
 @theme {
     --background-image-noise: linear-gradient(
             to bottom,
@@ -17,6 +43,14 @@
 }
 
 @layer base {
+    body {
+        @apply antialiased;
+        font-family: var(--font-sans);
+        background: var(--color-background);
+        color: var(--color-text);
+        transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
     h1 {
         @apply text-4xl font-bold tracking-tight sm:text-5xl;
     }
