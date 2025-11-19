@@ -85,8 +85,8 @@ const experiences = [
     }
 ];
 
-import Link from 'next/link';
-import { projects } from '../data/projects';
+
+
 
 export default function HomePage() {
     return (
@@ -112,11 +112,11 @@ export default function HomePage() {
                     </div>
                     <div className="flex flex-wrap gap-4">
                         <a
-                            href="/Shivam-Patel-Resume.pdf"
+                            href="/Shivam_Patel_Resume.pdf"
                             download
                             className="btn btn-lg bg-[var(--color-accent)] text-[var(--color-on-accent)] shadow-lg shadow-[var(--color-accent)]/40"
                         >
-                            Download sample resume
+                            Download Resume
                         </a>
                         <a
                             href="mailto:shivambpatel2121@gmail.com"
