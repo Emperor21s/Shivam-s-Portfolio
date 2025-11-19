@@ -1,101 +1,7 @@
-import fs from 'fs';
-import path from 'path';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { getProject, projects } from '@/data/projects';
 
-const ecommerceWireframeStages = [
-    {
-        key: 'sign-up',
-        matchers: ['sign-up', 'signup', 'sign_up', 'register'],
-        title: 'Sign up',
-        description: 'Account creation entry point with minimal required fields and password helpers.'
-    },
-    {
-        key: 'sign-in',
-        matchers: ['sign-in', 'signin', 'sign_in', 'login'],
-        title: 'Sign in',
-        description: 'Returning shopper authentication with obvious password reset and single CTA placement.'
-    },
-    {
-        key: 'home',
-        matchers: ['home', 'landing'],
-        title: 'Home',
-        description: 'Landing feed that spotlights featured categories and search entry points.'
-    },
-    {
-        key: 'catalog',
-        matchers: ['catalog', 'listing', 'browse'],
-        title: 'Product listing',
-        description: 'Grid layout illustrating filter placement, product cards, and pagination controls.'
-    },
-    {
-        key: 'product',
-        matchers: ['product', 'detail', 'pdp'],
-        title: 'Product detail',
-        description: 'Detail page wireframe with gallery, variant selectors, and anchored add-to-cart.'
-    },
-    {
-        key: 'cart',
-        matchers: ['cart', 'bag', 'basket'],
-        title: 'Cart',
-        description: 'Cart summary showing editable quantities, savings messaging, and checkout CTA.'
-    },
-    {
-        key: 'checkout',
-        matchers: ['checkout', 'payment'],
-        title: 'Checkout',
-        description: 'Step-based checkout covering address, delivery, and payment confirmation.'
-    }
-];
-
-function loadEcommerceWireframes() {
-    const directory = path.join(process.cwd(), 'public', 'images', 'ecoomerce');
-    if (!fs.existsSync(directory)) {
-        return [];
-    }
-
-    const files = fs
-        .readdirSync(directory)
-        .filter((file) => /\.(png|jpe?g|svg|webp)$/i.test(file));
-
-    return files
-        .map((file) => {
-            const filename = file.toLowerCase();
-            const stage = ecommerceWireframeStages.find((option) => option.matchers.some((match) => filename.includes(match)));
-
-            return {
-                title: stage?.title ?? 'Wireframe',
-                description: stage?.description ?? 'Experience wireframe supporting the shopper journey.',
-                image: `/images/ecoomerce/${file}`,
-                orderIndex: stage ? ecommerceWireframeStages.indexOf(stage) : ecommerceWireframeStages.length
-            };
-        })
-        .sort((a, b) => a.orderIndex - b.orderIndex || a.title.localeCompare(b.title));
-}
-
-export function generateStaticParams() {
-    return projects.map((project) => ({ slug: project.slug }));
-}
-
-export async function generateMetadata({ params }) {
-    const { slug } = await params;
-    const project = getProject(slug);
-    return {
-        title: project ? `${project.name} · Case study` : 'Project details'
-    };
-}
-
-export default async function ProjectDetailPage({ params }) {
-    const { slug } = await params;
-    const project = getProject(slug);
-    const wireframes = slug === 'ecommerce-experience' ? loadEcommerceWireframes() : [];
-
-    if (!project) {
-        notFound();
-    }
-
+export default function ProjectDetail({ project, wireframesHeading, wireframesDescription, wireframesNote, wireframes = [] }) {
     return (
         <div className="space-y-16" id="project-details">
             <section className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
@@ -181,11 +87,9 @@ export default async function ProjectDetailPage({ params }) {
                 <section className="space-y-8">
                     <div className="space-y-3">
                         <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-muted)]">Wireframes</p>
-                        <h2 className="text-3xl font-semibold text-[var(--color-heading)]">E-commerce capstone flow</h2>
-                        <p className="text-base text-[var(--color-text)]/90">
-                            Ordered low-fidelity screens walk through the shopper journey from sign up to checkout, highlighting
-                            key interaction points.
-                        </p>
+                        <h2 className="text-3xl font-semibold text-[var(--color-heading)]">{wireframesHeading}</h2>
+                        <p className="text-base text-[var(--color-text)]/90">{wireframesDescription}</p>
+                        {wireframesNote ? <p className="text-sm text-[var(--color-text)]/80">{wireframesNote}</p> : null}
                     </div>
                     <div className="grid gap-6 md:grid-cols-2">
                         {wireframes.map((frame) => (

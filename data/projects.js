@@ -1,6 +1,6 @@
 export const projects = [
     {
-        slug: 'ecommerce-experience',
+        href: '/projects/ecommerce-experience',
         name: 'E-Commerce Web Application (Capstone Project)',
         focus: 'UX & Front-end Focus',
         summary:
@@ -54,7 +54,7 @@ export const projects = [
         }
     },
     {
-        slug: 'hamilton-city-events',
+        href: '/projects/hamilton-city-events',
         name: 'Hamilton City Magazine Event Platform',
         focus: 'UX for Client’s Site',
         summary:
@@ -108,7 +108,7 @@ export const projects = [
         }
     },
     {
-        slug: 'hamilton-handoff',
+        href: '/projects/hamilton-handoff',
         name: 'Hamilton City Magazine Event Platform – Handoff',
         focus: 'Collaboration',
         summary:
@@ -163,4 +163,4 @@ export const projects = [
     }
 ];
 
-export const getProject = (slug) => projects.find((project) => project.slug === slug);
+export const getProjectByHref = (href) => projects.find((project) => project.href === href);
