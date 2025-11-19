@@ -1,33 +1,61 @@
 const professionalSummary =
-    'Creative and detail-oriented UI/UX Developer with experience designing and implementing user-centered web interfaces. Skilled in Figma, wireframing, prototyping, accessibility, and responsive front-end development using HTML, CSS, JavaScript, and React.';
+    'Results-driven Software & UX Developer with a strong foundation in full-stack development and agile methodologies. Experienced in building responsive React and Flask applications, creating RESTful APIs backed by SQL databases, and translating research into intuitive user experiences.';
 
 const introduction =
-    'Comfortable working with design systems and collaborating closely with developers and stakeholders to turn complex requirements into simple, intuitive user experiences.';
+    'I combine product discovery, accessibility testing, and visual design with hands-on experience shipping production-ready code—bridging the gap between UX strategy and engineering execution.';
 
 const contactDetails = [
     { label: 'Email', value: 'shivambpatel2121@gmail.com', href: 'mailto:shivambpatel2121@gmail.com' },
     { label: 'Phone', value: '+1 (416) 836-5054', href: 'tel:+14168365054' },
-    { label: 'Location', value: 'Hamilton, ON' }
+    { label: 'Location', value: 'Hamilton, ON' },
+    { label: 'LinkedIn', value: 'linkedin.com/in/shivam2102', href: 'https://www.linkedin.com/in/shivam2102' }
 ];
 
 const coreSkills = [
-    'UX Design: User flows, wireframes, high-fidelity mock-ups, interactive prototypes, information architecture',
-    'UI Development: HTML5, CSS3, JavaScript (ES6+), ReactJS, responsive layouts, grid/Flexbox',
-    'Tools & Systems: Figma, Miro, Ontario Design System (ODS), Slack, Azure DevOps',
-    'Research & Accessibility: Usability testing, heuristic evaluation, accessibility best practices (WCAG/AODA)',
-    'Collaboration: Design-to-development handoff, working with engineers & PMs, Agile/Scrum ceremonies'
+    'Full-stack delivery: Design React interfaces, build RESTful APIs with Flask, and integrate SQL-backed data models.',
+    'UX craftsmanship: Create user flows, high-fidelity prototypes, and usability tests that prioritize accessibility.',
+    'Front-end engineering: HTML5, CSS3, JavaScript (ES6+), React Router, responsive layouts, cross-browser QA.',
+    'Operational excellence: Azure DevOps, Git/GitHub, Agile ceremonies, ticket triage, and IT support workflows.',
+    'Quality mindset: Test-driven development, unit/integration testing, and structured handoffs for smoother launches.'
+];
+
+const technicalSkills = [
+    {
+        category: 'Programming',
+        items: ['Python', 'Java', 'JavaScript', 'C#', 'SQL', 'HTML5/CSS3']
+    },
+    {
+        category: 'Frameworks & Libraries',
+        items: ['Flask', 'ReactJS', 'RESTful API design', 'jQuery']
+    },
+    {
+        category: 'Databases',
+        items: ['MySQL', 'SQL Server (fundamentals)']
+    },
+    {
+        category: 'Tools',
+        items: ['Git & GitHub', 'VS Code', 'Postman', 'Azure DevOps', 'Linux/Unix basics']
+    },
+    {
+        category: 'Practices',
+        items: ['Agile/Scrum', 'TDD', 'CI/CD pipelines (basic)', 'Object-Oriented Design']
+    },
+    {
+        category: 'Experience Enhancers',
+        items: ['Cross-browser development', 'Responsive Web Design', 'Unit/Integration Testing']
+    }
 ];
 
 const experiences = [
     {
-        role: 'Freelance UX/UI Designer · IT Support',
-        organization: 'Kardia Repairs & Installation (Whirlpool Partner)',
+        role: 'Freelance Software Developer & IT Support',
+        organization: 'Kardia Repair & Installation (Whirlpool Partner)',
         location: 'Hamilton, ON',
         period: 'Feb 2025 – Present',
         bullets: [
-            'Leading the UX design of a customer booking website from concept to prototype: created user flows, low-fidelity wireframes, and high-fidelity Figma designs for desktop and mobile.',
-            'Built interactive prototypes to validate the booking experience and used informal usability testing with staff/customers to identify friction points and iterate on the design.',
-            'Collaborating with a small development team to implement designs using modern front-end practices (semantic HTML, responsive CSS, and React components), ensuring accessibility and visual consistency.'
+            'Leading the design and development of a customer booking web application: produced Figma wireframes and prototypes, then spearheaded the React front-end implementation to ensure a responsive, intuitive UI.',
+            'Coordinating daily with a small developer team to align milestones, refine REST API contracts, and uphold accessibility and performance standards across devices.',
+            'Managing service-center IT operations (ticketing, scheduling, parts procurement, feedback tracking) and implementing digital workflows that improved efficiency and reduced technician response times.'
         ]
     },
     {
@@ -36,44 +64,45 @@ const experiences = [
         location: 'St Catharines, ON',
         period: 'May 2023 – Aug 2023',
         bullets: [
-            'Redesigned legacy web forms into modern, accessible interfaces using the Ontario Design System (ODS), improving clarity, reducing cognitive load, and supporting mobile users.',
-            'Produced detailed Figma prototypes, component specifications, and design documentation to support front-end developers and maintain a consistent design language across pages.',
-            'Conducted usability testing and accessibility checks, then iterated on UI patterns to address issues (field labels, error states, contrast) and support WCAG 2.1/AODA compliance.',
-            'Collaborated in an Agile environment using Azure DevOps to manage design tasks, align with user stories, and present work regularly to stakeholders.'
+            'Designed modern, mobile-responsive web forms using the Ontario Design System (ODS) and Figma, ensuring 100% WCAG 2.1 accessibility compliance.',
+            'Partnered with Infosys front-end developers to translate Figma prototypes into production-ready HTML, CSS, and JavaScript with pixel-perfect fidelity.',
+            'Leveraged Azure DevOps to manage user stories, share design deliverables, and participate in Agile ceremonies for alignment with stakeholders.'
         ]
     },
     {
         role: 'IT Support Officer (Tier 2)',
         organization: 'Ontario Ministry of Public and Business Service Delivery',
         location: 'Guelph, ON',
-        period: 'May 2023 – Aug 2023',
+        period: 'Sep 2022 – Dec 2022',
         bullets: [
-            'Provided end-user support that strengthened empathy, communication, and problem-solving skills used daily in UX work.',
-            'Documented common issues and solutions, reinforcing the importance of clear guidance and well-structured information for users.'
+            'Provided Tier-2 support for 100+ government staff, resolving hardware, Windows, and VPN issues with an 85% first-contact resolution rate to minimize downtime.',
+            'Managed user accounts and access rights using Active Directory and Microsoft Intune, deploying software updates while enforcing IT security policies.',
+            'Investigated complex incidents alongside network/infrastructure teams, delivering diagnostics and updates that restored services within SLA timeframes.'
         ]
     }
 ];
 
 const projects = [
     {
-        name: 'E-Commerce Web Application (Capstone Project)',
-        focus: 'UX & Front-end Focus',
+        name: 'Customer Booking Platform (In Progress)',
+        focus: 'Full-Stack & UX',
         summary:
-            'Led UI/UX design for a full-stack e-commerce site, defining navigation structure and page layouts (home, product listing, product detail, cart, checkout).',
-        detail: 'Created Figma prototypes and worked with the team to implement designs in React, focusing on responsive behavior, clear visual hierarchy, and a frictionless checkout flow.'
+            'Designing and building a booking experience for a Whirlpool partner, pairing Figma prototypes with a React UI and coordinating REST API integrations.',
+        detail: 'Owns usability validation, accessibility audits, and front-end implementation to maintain consistent interactions across desktop and mobile views.'
+    },
+    {
+        name: 'E-Commerce Web Application (Capstone Project)',
+        focus: 'Full-Stack Delivery',
+        summary:
+            'Built a simulated online retail experience with a Flask backend, React front-end, and MySQL database powering user accounts, products, and orders.',
+        detail: 'Designed RESTful endpoints, integrated Stripe for payments, and used Selenium + TDD to validate cart and checkout flows while refining the UI/UX in React Router.'
     },
     {
         name: 'Hamilton City Magazine Event Platform',
-        focus: 'UX for Client’s Site',
+        focus: 'UX & Integration',
         summary:
-            'Designed a mobile-responsive event discovery experience for Hamilton City Magazine, from initial sketches to final UI.',
-        detail: 'Defined user journeys (discover events, filter by category/date, view details) and prepared wireframes and high-fidelity mockups in Figma.'
-    },
-    {
-        name: 'Hamilton City Magazine Event Platform – Handoff',
-        focus: 'Collaboration',
-        summary: 'Collaborated with developers integrating a Flask backend and WordPress front-end, ensuring the final interface matched design intent and remained practical for the client to maintain.',
-        detail: 'Provided design support so the team could keep the user experience consistent while launching the production site.'
+            'Led UX design for a centralized event listing platform—translating client requirements into Figma mockups and intuitive navigation.',
+        detail: 'Integrated a custom Flask + MySQL backend with a WordPress front-end via an AJAX-powered plugin, enabling live search/filtering and improved accessibility.'
     }
 ];
 
@@ -119,12 +148,12 @@ export default function HomePage() {
                     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Introduction</p>
                     <p className="text-base text-[var(--color-text)]/90">{introduction}</p>
                     <p className="text-base text-[var(--color-text)]/90">
-                        Research strengths include usability testing, heuristic evaluation, accessibility best practices (WCAG/AODA),
-                        and user feedback analysis.
+                        Technical toolkit: React, Flask, RESTful API design, SQL schema modeling, Stripe/third-party integrations, and
+                        automated testing to ensure reliability.
                     </p>
                     <p className="text-base text-[var(--color-text)]/90">
-                        Collaboration focus areas: design-to-development handoff, working with engineers and PMs, Agile/Scrum ceremonies,
-                        and presenting design decisions.
+                        Collaboration focus areas: design-to-development handoff, Agile/Scrum ceremonies, IT operations, and presenting
+                        research-backed decisions to cross-functional teams.
                     </p>
                 </div>
             </section>
@@ -133,7 +162,7 @@ export default function HomePage() {
                 <div className="space-y-4">
                     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Core Skills</p>
                     <p className="text-lg text-[var(--color-text)]/90">
-                        UX Design · UI Development · Tools & Systems · Research & Accessibility · Collaboration
+                        UX Strategy · Front-end Engineering · Product Delivery · Agile Collaboration · Quality Practices
                     </p>
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
@@ -148,12 +177,45 @@ export default function HomePage() {
                 </div>
             </section>
 
+            <section className="space-y-8" id="technical-skills">
+                <div className="space-y-4">
+                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Technical Skills</p>
+                    <p className="text-lg text-[var(--color-text)]/90">
+                        The toolset I rely on to build performant, accessible products from concept to launch.
+                    </p>
+                </div>
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {technicalSkills.map((skill) => (
+                        <article
+                            key={skill.category}
+                            className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-5 shadow-[0_15px_40px_rgba(15,23,42,0.08)]"
+                        >
+                            <div className="flex items-center justify-between gap-4">
+                                <h3 className="text-base font-semibold text-[var(--color-heading)]">{skill.category}</h3>
+                                <span className="text-xs uppercase tracking-[0.3em] text-[var(--color-muted)]">{skill.items.length} items</span>
+                            </div>
+                            <div className="mt-4 flex flex-wrap gap-2 text-sm text-[var(--color-text)]/90">
+                                {skill.items.map((item) => (
+                                    <span
+                                        key={item}
+                                        className="rounded-full border border-[var(--color-border)] bg-[var(--color-elevated)]/70 px-3 py-1"
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </section>
+
             <section className="space-y-10" id="resume">
                 <div className="space-y-4">
                     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Resume</p>
                     <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Experience overview</h2>
                     <p className="text-base text-[var(--color-text)]/90">
-                        Mohawk College – Advanced Diploma, Software Development (Honors), Hamilton, ON (Sep 2020 – Apr 2024).
+                        Mohawk College – Advanced Diploma, Software Development (Honors), Hamilton, ON (Sep 2020 – Apr 2024). Coursework: Full-Stack
+                        Development, Web Programming, Database Design, Software Testing, Agile Project Management.
                     </p>
                 </div>
                 <div className="grid gap-6 lg:grid-cols-3">
