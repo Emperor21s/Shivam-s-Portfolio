@@ -1,146 +1,159 @@
-const highlights = [
-    {
-        title: 'Rapid Prototyping',
-        description:
-            'Translate ambiguous ideas into interactive interfaces using Figma, React, and usability research to ship validated features quickly.'
-    },
-    {
-        title: 'Full-Stack Delivery',
-        description:
-            'Build resilient applications with TypeScript, Next.js, Node.js, and GraphQL/REST integrations that handle real-world traffic.'
-    },
-    {
-        title: 'Client Partnership',
-        description:
-            'Guide stakeholders through discovery, technical trade-offs, and launch planning to ensure every release ladders up to business goals.'
-    }
+const professionalSummary =
+    'Creative and detail-oriented UI/UX Developer with experience designing and implementing user-centered web interfaces. Skilled in Figma, wireframing, prototyping, accessibility, and responsive front-end development using HTML, CSS, JavaScript, and React.';
+
+const introduction =
+    'Comfortable working with design systems and collaborating closely with developers and stakeholders to turn complex requirements into simple, intuitive user experiences.';
+
+const contactDetails = [
+    { label: 'Email', value: 'shivambpatel2121@gmail.com', href: 'mailto:shivambpatel2121@gmail.com' },
+    { label: 'Phone', value: '+1 (416) 836-5054', href: 'tel:+14168365054' },
+    { label: 'Location', value: 'Hamilton, ON' }
+];
+
+const coreSkills = [
+    'UX Design: User flows, wireframes, high-fidelity mock-ups, interactive prototypes, information architecture',
+    'UI Development: HTML5, CSS3, JavaScript (ES6+), ReactJS, responsive layouts, grid/Flexbox',
+    'Tools & Systems: Figma, Miro, Ontario Design System (ODS), Slack, Azure DevOps',
+    'Research & Accessibility: Usability testing, heuristic evaluation, accessibility best practices (WCAG/AODA)',
+    'Collaboration: Design-to-development handoff, working with engineers & PMs, Agile/Scrum ceremonies'
 ];
 
 const experiences = [
     {
-        role: 'Freelance Developer & Support – Staples (in transition)',
-        period: 'Oct 2022 – Present',
+        role: 'Freelance UX/UI Designer · IT Support',
+        organization: 'Kardia Repairs & Installation (Whirlpool Partner)',
+        location: 'Hamilton, ON',
+        period: 'Feb 2025 – Present',
         bullets: [
-            'Support new Staples POS rollouts by coordinating across engineering, retail teams, and vendors to keep operations online.',
-            'Prototype accessibility and service design improvements for national retail locations.'
+            'Leading the UX design of a customer booking website from concept to prototype: created user flows, low-fidelity wireframes, and high-fidelity Figma designs for desktop and mobile.',
+            'Built interactive prototypes to validate the booking experience and used informal usability testing with staff/customers to identify friction points and iterate on the design.',
+            'Collaborating with a small development team to implement designs using modern front-end practices (semantic HTML, responsive CSS, and React components), ensuring accessibility and visual consistency.'
         ]
     },
     {
-        role: 'Ontario Ministry of Transportation – UX Research & Design',
-        period: 'Jan 2023 – Aug 2023',
+        role: 'Junior UX Designer (Co-op)',
+        organization: 'Ministry of Transportation',
+        location: 'St Catharines, ON',
+        period: 'May 2023 – Aug 2023',
         bullets: [
-            'Designed multi-channel services (web, kiosks, in-person) for 15M+ Ontarians with a focus on accessibility and digital self-serve.',
-            'Created research-backed personas, task flows, and design systems that improved completion time for key transactions.'
+            'Redesigned legacy web forms into modern, accessible interfaces using the Ontario Design System (ODS), improving clarity, reducing cognitive load, and supporting mobile users.',
+            'Produced detailed Figma prototypes, component specifications, and design documentation to support front-end developers and maintain a consistent design language across pages.',
+            'Conducted usability testing and accessibility checks, then iterated on UI patterns to address issues (field labels, error states, contrast) and support WCAG 2.1/AODA compliance.',
+            'Collaborated in an Agile environment using Azure DevOps to manage design tasks, align with user stories, and present work regularly to stakeholders.'
         ]
     },
     {
-        role: 'Canada Post – IT Support Officer (Tier 2/3)',
-        period: 'May 2022 – Aug 2022',
+        role: 'IT Support Officer (Tier 2)',
+        organization: 'Ontario Ministry of Public and Business Service Delivery',
+        location: 'Guelph, ON',
+        period: 'May 2023 – Aug 2023',
         bullets: [
-            'Resolved enterprise-scale incidents across 6K+ workstations and automated routine health checks for nationwide depots.',
-            'Partnered with development teams to document recurring issues and reduce escalations by 30%.'
+            'Provided end-user support that strengthened empathy, communication, and problem-solving skills used daily in UX work.',
+            'Documented common issues and solutions, reinforcing the importance of clear guidance and well-structured information for users.'
         ]
     }
 ];
 
 const projects = [
     {
-        name: 'E‑commerce Web Application',
-        focus: 'React • Node.js • Azure • GraphQL',
+        name: 'E-Commerce Web Application (Capstone Project)',
+        focus: 'UX & Front-end Focus',
         summary:
-            'Built a multi-tenant marketplace experience with real-time product inventory, secure checkout, and a component library for merchandising teams.'
+            'Led UI/UX design for a full-stack e-commerce site, defining navigation structure and page layouts (home, product listing, product detail, cart, checkout).',
+        detail: 'Created Figma prototypes and worked with the team to implement designs in React, focusing on responsive behavior, clear visual hierarchy, and a frictionless checkout flow.'
     },
     {
-        name: 'Hamilton City Magazine Web Experience',
-        focus: 'Next.js • Headless CMS • Accessibility',
+        name: 'Hamilton City Magazine Event Platform',
+        focus: 'UX for Client’s Site',
         summary:
-            'Launched a responsive storytelling platform that helped the publication scale distribution beyond print through curated landing pages and paywall-ready flows.'
+            'Designed a mobile-responsive event discovery experience for Hamilton City Magazine, from initial sketches to final UI.',
+        detail: 'Defined user journeys (discover events, filter by category/date, view details) and prepared wireframes and high-fidelity mockups in Figma.'
     },
     {
-        name: 'Event Aggregation Platform',
-        focus: 'TypeScript • Firebase • UX Research',
-        summary:
-            'Combined qualitative interviews and telemetry to design a personalized event feed for university organizations, boosting RSVP rates during pilot programs.'
+        name: 'Hamilton City Magazine Event Platform – Handoff',
+        focus: 'Collaboration',
+        summary: 'Collaborated with developers integrating a Flask backend and WordPress front-end, ensuring the final interface matched design intent and remained practical for the client to maintain.',
+        detail: 'Provided design support so the team could keep the user experience consistent while launching the production site.'
     }
-];
-
-const skills = [
-    'React & Next.js',
-    'TypeScript & Node.js',
-    'REST & GraphQL APIs',
-    'PostgreSQL & Azure SQL',
-    'Figma & Design Systems',
-    'UX Research & Testing',
-    'Agile Delivery',
-    'Incident Response'
 ];
 
 export default function HomePage() {
     return (
-        <div className="space-y-20" id="home">
-            <section className="grid gap-8 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.12)] lg:grid-cols-[3fr,2fr]">
+        <div className="space-y-16" id="home">
+            <section className="grid gap-8 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.12)] md:grid-cols-2">
                 <div className="space-y-6">
-                    <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-muted)]">Product Engineer · UX Researcher</p>
-                    <h1 className="text-3xl font-semibold leading-tight text-[var(--color-heading)] sm:text-4xl">
-                        Hi, I’m Shivam Patel. I design and code digital experiences that help civic institutions and retailers serve people faster.
-                    </h1>
-                    <p className="text-lg text-[var(--color-text)]/90">
-                        Currently based in Hamilton, ON and finishing the Honours BSc in Computer Science at Toronto Metropolitan University.
-                        I thrive at the intersection of research, service design, and hands-on engineering—turning complex systems into intuitive products.
-                    </p>
+                    <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-muted)]">UI/UX Developer</p>
+                    <h1 className="text-3xl font-semibold leading-tight text-[var(--color-heading)] sm:text-4xl">Shivam Patel</h1>
+                    <p className="text-base text-[var(--color-text)]/90">{professionalSummary}</p>
+                    <div className="grid gap-4 text-sm text-[var(--color-text)]/90 sm:grid-cols-2">
+                        {contactDetails.map((item) => (
+                            <div key={item.label} className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-elevated)]/60 p-4">
+                                <p className="text-[var(--color-muted)]">{item.label}</p>
+                                {item.href ? (
+                                    <a href={item.href} className="font-semibold text-[var(--color-heading)] no-underline">
+                                        {item.value}
+                                    </a>
+                                ) : (
+                                    <p className="font-semibold text-[var(--color-heading)]">{item.value}</p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                     <div className="flex flex-wrap gap-4">
                         <a
-                            href="#resume"
+                            href="/Shivam-Patel-Resume.pdf"
+                            download
                             className="btn btn-lg bg-[var(--color-accent)] text-[var(--color-on-accent)] shadow-lg shadow-[var(--color-accent)]/40"
                         >
-                            View resume snapshot
+                            Download sample resume
                         </a>
                         <a
-                            href="mailto:shivam.patel@mail.utoronto.ca"
+                            href="mailto:shivambpatel2121@gmail.com"
                             className="btn btn-lg bg-transparent text-[var(--color-heading)] ring-1 ring-[var(--color-border)]"
                         >
-                            Say hello
+                            Message me
                         </a>
                     </div>
                 </div>
-                <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-elevated)] p-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">At a glance</p>
-                    <dl className="mt-6 space-y-5 text-sm">
-                        <div className="flex items-center justify-between border-b border-dashed border-[var(--color-border)] pb-3">
-                            <dt className="text-[var(--color-muted)]">Years creating digital products</dt>
-                            <dd className="text-lg font-semibold text-[var(--color-heading)]">4+</dd>
-                        </div>
-                        <div className="flex items-center justify-between border-b border-dashed border-[var(--color-border)] pb-3">
-                            <dt className="text-[var(--color-muted)]">Platforms supported</dt>
-                            <dd className="text-lg font-semibold text-[var(--color-heading)]">Web · Kiosk · Mobile</dd>
-                        </div>
-                        <div className="flex items-center justify-between">
-                            <dt className="text-[var(--color-muted)]">Industries</dt>
-                            <dd className="text-lg font-semibold text-[var(--color-heading)]">Public sector · Retail · Media</dd>
-                        </div>
-                    </dl>
+                <div className="space-y-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-elevated)]/70 p-6">
+                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Introduction</p>
+                    <p className="text-base text-[var(--color-text)]/90">{introduction}</p>
+                    <p className="text-base text-[var(--color-text)]/90">
+                        Research strengths include usability testing, heuristic evaluation, accessibility best practices (WCAG/AODA),
+                        and user feedback analysis.
+                    </p>
+                    <p className="text-base text-[var(--color-text)]/90">
+                        Collaboration focus areas: design-to-development handoff, working with engineers and PMs, Agile/Scrum ceremonies,
+                        and presenting design decisions.
+                    </p>
                 </div>
             </section>
 
-            <section className="grid gap-6 md:grid-cols-3">
-                {highlights.map((highlight) => (
-                    <article
-                        key={highlight.title}
-                        className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-elevated)] p-6"
-                    >
-                        <h3 className="text-xl font-semibold text-[var(--color-heading)]">{highlight.title}</h3>
-                        <p className="mt-3 text-sm text-[var(--color-text)]/90">{highlight.description}</p>
-                    </article>
-                ))}
+            <section className="space-y-8" id="skills">
+                <div className="space-y-4">
+                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Core Skills</p>
+                    <p className="text-lg text-[var(--color-text)]/90">
+                        UX Design · UI Development · Tools & Systems · Research & Accessibility · Collaboration
+                    </p>
+                </div>
+                <div className="grid gap-4 md:grid-cols-2">
+                    {coreSkills.map((skill) => (
+                        <article
+                            key={skill}
+                            className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-5 text-sm text-[var(--color-text)]/90"
+                        >
+                            {skill}
+                        </article>
+                    ))}
+                </div>
             </section>
 
             <section className="space-y-10" id="resume">
-                <div className="max-w-3xl space-y-4">
+                <div className="space-y-4">
                     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Resume</p>
-                    <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Blending research, service design, and resilient engineering.</h2>
-                    <p className="text-lg text-[var(--color-text)]/90">
-                        I love helping cross-functional teams validate the right problem, build delightful solutions, and launch them with confidence.
-                        Here’s a snapshot of the roles that shaped how I work.
+                    <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Experience overview</h2>
+                    <p className="text-base text-[var(--color-text)]/90">
+                        Mohawk College – Advanced Diploma, Software Development (Honors), Hamilton, ON (Sep 2020 – Apr 2024).
                     </p>
                 </div>
                 <div className="grid gap-6 lg:grid-cols-3">
@@ -149,8 +162,10 @@ export default function HomePage() {
                             key={experience.role}
                             className="flex h-full flex-col gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]/70 p-6"
                         >
-                            <div>
+                            <div className="space-y-1">
                                 <h3 className="text-xl font-semibold text-[var(--color-heading)]">{experience.role}</h3>
+                                <p className="text-sm text-[var(--color-muted)]">{experience.organization}</p>
+                                <p className="text-sm text-[var(--color-muted)]">{experience.location}</p>
                                 <p className="text-sm text-[var(--color-muted)]">{experience.period}</p>
                             </div>
                             <ul className="space-y-3 text-sm text-[var(--color-text)]/90">
@@ -164,30 +179,26 @@ export default function HomePage() {
                         </article>
                     ))}
                 </div>
-                <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-elevated)] p-6">
-                    <h3 className="text-lg font-semibold text-[var(--color-heading)]">Core tools & processes</h3>
-                    <div className="mt-4 flex flex-wrap gap-3">
-                        {skills.map((skill) => (
-                            <span
-                                key={skill}
-                                className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-medium text-[var(--color-heading)]"
-                            >
-                                {skill}
-                            </span>
-                        ))}
-                    </div>
+                <div className="rounded-2xl border border-dashed border-[var(--color-border)] bg-[var(--color-elevated)]/60 p-6 text-sm text-[var(--color-text)]/90">
+                    <p className="font-semibold text-[var(--color-heading)]">Resume file</p>
+                    <p className="mt-2">Download the sample resume to keep an offline copy.</p>
+                    <a
+                        href="/Shivam-Patel-Resume.pdf"
+                        download
+                        className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--color-heading)] px-5 py-2 text-white"
+                    >
+                        Sample resume (PDF)
+                        <span aria-hidden="true">↓</span>
+                    </a>
                 </div>
             </section>
 
             <section className="space-y-10" id="projects">
-                <div className="max-w-3xl space-y-4">
+                <div className="space-y-4">
                     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Projects</p>
-                    <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Recent initiatives I’m proud of.</h2>
-                    <p className="text-lg text-[var(--color-text)]/90">
-                        Each engagement required balancing discovery, engineering rigor, and measurable outcomes. These stories represent the type of partnership I bring to your team.
-                    </p>
+                    <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Recent project collaborations</h2>
                 </div>
-                <div className="grid gap-6 lg:grid-cols-3">
+                <div className="grid gap-6 md:grid-cols-2">
                     {projects.map((project) => (
                         <article
                             key={project.name}
@@ -198,27 +209,38 @@ export default function HomePage() {
                                 <h3 className="mt-2 text-2xl font-semibold text-[var(--color-heading)]">{project.name}</h3>
                             </div>
                             <p className="text-sm text-[var(--color-text)]/90">{project.summary}</p>
-                            <div className="mt-auto text-sm font-semibold text-[var(--color-accent)]">Case study in progress →</div>
+                            <p className="text-sm text-[var(--color-text)]/90">{project.detail}</p>
+                            <a
+                                href="mailto:shivambpatel2121@gmail.com?subject=Project%20collaboration"
+                                className="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] bg-transparent px-4 py-2 text-sm font-semibold text-[var(--color-heading)]"
+                            >
+                                Message me about this project
+                            </a>
                         </article>
                     ))}
                 </div>
             </section>
 
-            <section className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-8 text-center">
-                <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-muted)]">Let’s collaborate</p>
-                <h2 className="mt-4 text-3xl font-semibold text-[var(--color-heading)]">
-                    Have a product brief, service challenge, or upcoming launch?
-                </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--color-text)]/90">
-                    I’m ready to help teams uncover insights, translate them into elegant software, and iterate after launch. Send a note with a few lines about your challenge, and I’ll reply within a day.
+            <section className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/90 p-8 text-center">
+                <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-muted)]">Let’s connect</p>
+                <h2 className="mt-4 text-3xl font-semibold text-[var(--color-heading)]">Ready to discuss your next UX or front-end need?</h2>
+                <p className="mx-auto mt-4 max-w-2xl text-base text-[var(--color-text)]/90">
+                    Reach out with a short note about the challenge, and I will respond as soon as possible.
                 </p>
-                <a
-                    href="mailto:shivam.patel@mail.utoronto.ca"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--color-heading)] px-6 py-3 text-base font-semibold text-white"
-                >
-                    Start a conversation
-                    <span aria-hidden="true">→</span>
-                </a>
+                <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
+                    <a
+                        href="mailto:shivambpatel2121@gmail.com"
+                        className="inline-flex items-center gap-2 rounded-full bg-[var(--color-heading)] px-6 py-3 font-semibold text-white"
+                    >
+                        Message me
+                    </a>
+                    <a
+                        href="tel:+14168365054"
+                        className="inline-flex items-center gap-2 rounded-full bg-transparent px-6 py-3 font-semibold text-[var(--color-heading)] ring-1 ring-[var(--color-border)]"
+                    >
+                        Call +1 (416) 836-5054
+                    </a>
+                </div>
             </section>
         </div>
     );
