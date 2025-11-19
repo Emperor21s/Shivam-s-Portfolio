@@ -1,0 +1,17 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Component inventory">
+    <rect width="1200" height="700" rx="40" fill="#020617" />
+    <rect x="120" y="120" width="300" height="460" rx="28" fill="#1f2937" />
+    <rect x="460" y="120" width="300" height="460" rx="28" fill="#1f2937" />
+    <rect x="800" y="120" width="280" height="460" rx="28" fill="#1f2937" />
+    <text x="150" y="180" font-family="'Inter', sans-serif" font-size="28" fill="#a5b4fc">Buttons</text>
+    <text x="490" y="180" font-family="'Inter', sans-serif" font-size="28" fill="#34d399">Cards</text>
+    <text x="830" y="180" font-family="'Inter', sans-serif" font-size="28" fill="#f87171">Badges</text>
+    <rect x="150" y="220" width="240" height="50" rx="24" fill="#6366f1" />
+    <rect x="150" y="290" width="240" height="50" rx="24" fill="#a78bfa" />
+    <rect x="150" y="360" width="240" height="50" rx="24" fill="#c084fc" />
+    <rect x="490" y="230" width="240" height="160" rx="24" fill="#0f172a" />
+    <rect x="490" y="410" width="240" height="140" rx="24" fill="#0f172a" />
+    <rect x="830" y="230" width="220" height="60" rx="30" fill="#fef3c7" />
+    <rect x="830" y="310" width="220" height="60" rx="30" fill="#fde68a" />
+    <rect x="830" y="390" width="220" height="60" rx="30" fill="#fcd34d" />
+</svg>

@@ -1,0 +1,10 @@
+<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Design tokens">
+    <rect width="1200" height="700" rx="40" fill="#f8fafc" />
+    <rect x="220" y="160" width="760" height="380" rx="30" fill="#e2e8f0" />
+    <rect x="260" y="200" width="680" height="80" rx="24" fill="#bfdbfe" />
+    <rect x="260" y="300" width="680" height="80" rx="24" fill="#fcd34d" />
+    <rect x="260" y="400" width="680" height="80" rx="24" fill="#fbbf24" />
+    <text x="280" y="250" font-size="28" font-family="'Inter', sans-serif" fill="#0f172a">--color-primary: #2563eb</text>
+    <text x="280" y="350" font-size="28" font-family="'Inter', sans-serif" fill="#0f172a">--color-accent: #f97316</text>
+    <text x="280" y="450" font-size="28" font-family="'Inter', sans-serif" fill="#0f172a">--radius-large: 32px</text>
+</svg>
