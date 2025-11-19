@@ -1,0 +1,10 @@
+<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sponsor highlight">
+    <rect width="1200" height="700" rx="40" fill="#312e81" />
+    <rect x="200" y="160" width="800" height="380" rx="40" fill="#4338ca" />
+    <rect x="240" y="200" width="720" height="140" rx="30" fill="#a5b4fc" />
+    <rect x="240" y="360" width="440" height="140" rx="30" fill="#818cf8" />
+    <rect x="700" y="360" width="260" height="140" rx="30" fill="#6366f1" />
+    <text x="260" y="250" font-size="36" font-family="'Inter', sans-serif" fill="#1e1b4b">Partner spotlight</text>
+    <text x="260" y="420" font-size="28" font-family="'Inter', sans-serif" fill="#eef2ff">Non-intrusive CTA + stats</text>
+    <text x="720" y="440" font-size="24" font-family="'Inter', sans-serif" fill="#eef2ff">Sponsor CTA</text>
+</svg>

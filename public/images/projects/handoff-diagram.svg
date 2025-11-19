@@ -1,0 +1,17 @@
+<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Implementation lifecycle diagram">
+    <rect width="1200" height="700" rx="40" fill="#06131f" />
+    <circle cx="600" cy="350" r="220" fill="#0f172a" stroke="#38bdf8" stroke-width="8" />
+    <text x="560" y="360" font-size="42" font-family="'Inter', sans-serif" fill="#38bdf8">Build</text>
+    <text x="380" y="360" font-size="30" font-family="'Inter', sans-serif" fill="#facc15">Plan</text>
+    <text x="780" y="360" font-size="30" font-family="'Inter', sans-serif" fill="#f97316">Review</text>
+    <text x="560" y="520" font-size="30" font-family="'Inter', sans-serif" fill="#22d3ee">Learn</text>
+    <path d="M480 210 A220 220 0 0 1 720 210" stroke="#facc15" stroke-width="10" fill="none" marker-end="url(#arrow5)" />
+    <path d="M780 250 A220 220 0 0 1 780 450" stroke="#f97316" stroke-width="10" fill="none" marker-end="url(#arrow5)" />
+    <path d="M720 490 A220 220 0 0 1 480 490" stroke="#22d3ee" stroke-width="10" fill="none" marker-end="url(#arrow5)" />
+    <path d="M420 450 A220 220 0 0 1 420 250" stroke="#38bdf8" stroke-width="10" fill="none" marker-end="url(#arrow5)" />
+    <defs>
+        <marker id="arrow5" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="#38bdf8" />
+        </marker>
+    </defs>
+</svg>

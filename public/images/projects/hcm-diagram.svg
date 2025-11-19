@@ -1,0 +1,19 @@
+<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Discovery flow diagram">
+    <rect width="1200" height="700" rx="40" fill="#031525" />
+    <circle cx="300" cy="350" r="110" fill="#fb7185" opacity="0.9" />
+    <circle cx="600" cy="350" r="110" fill="#f97316" opacity="0.9" />
+    <circle cx="900" cy="350" r="110" fill="#facc15" opacity="0.9" />
+    <text x="250" y="360" font-size="32" font-family="'Inter', sans-serif" fill="#fff">Awareness</text>
+    <text x="560" y="360" font-size="32" font-family="'Inter', sans-serif" fill="#fff">Browse</text>
+    <text x="860" y="360" font-size="32" font-family="'Inter', sans-serif" fill="#0f172a">RSVP</text>
+    <path d="M410 350h140" stroke="#fcd34d" stroke-width="10" marker-end="url(#arrow3)" />
+    <path d="M710 350h140" stroke="#fcd34d" stroke-width="10" marker-end="url(#arrow3)" />
+    <text x="320" y="470" font-size="24" font-family="'Inter', sans-serif" fill="#bae6fd">Stories</text>
+    <text x="620" y="470" font-size="24" font-family="'Inter', sans-serif" fill="#bae6fd">Filters</text>
+    <text x="920" y="470" font-size="24" font-family="'Inter', sans-serif" fill="#082f49">Tickets</text>
+    <defs>
+        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="#fcd34d" />
+        </marker>
+    </defs>
+</svg>

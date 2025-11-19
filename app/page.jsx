@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import { projects } from '@/data/projects';
+
 const professionalSummary =
     'Creative and detail-oriented UI/UX Developer with experience designing and implementing user-centered web interfaces. Skilled in Figma, wireframing, prototyping, accessibility, and responsive front-end development using HTML, CSS, JavaScript, and React.';
 
@@ -51,29 +54,6 @@ const experiences = [
             'Provided end-user support that strengthened empathy, communication, and problem-solving skills used daily in UX work.',
             'Documented common issues and solutions, reinforcing the importance of clear guidance and well-structured information for users.'
         ]
-    }
-];
-
-const projects = [
-    {
-        name: 'E-Commerce Web Application (Capstone Project)',
-        focus: 'UX & Front-end Focus',
-        summary:
-            'Led UI/UX design for a full-stack e-commerce site, defining navigation structure and page layouts (home, product listing, product detail, cart, checkout).',
-        detail: 'Created Figma prototypes and worked with the team to implement designs in React, focusing on responsive behavior, clear visual hierarchy, and a frictionless checkout flow.'
-    },
-    {
-        name: 'Hamilton City Magazine Event Platform',
-        focus: 'UX for Client’s Site',
-        summary:
-            'Designed a mobile-responsive event discovery experience for Hamilton City Magazine, from initial sketches to final UI.',
-        detail: 'Defined user journeys (discover events, filter by category/date, view details) and prepared wireframes and high-fidelity mockups in Figma.'
-    },
-    {
-        name: 'Hamilton City Magazine Event Platform – Handoff',
-        focus: 'Collaboration',
-        summary: 'Collaborated with developers integrating a Flask backend and WordPress front-end, ensuring the final interface matched design intent and remained practical for the client to maintain.',
-        detail: 'Provided design support so the team could keep the user experience consistent while launching the production site.'
     }
 ];
 
@@ -210,12 +190,20 @@ export default function HomePage() {
                             </div>
                             <p className="text-sm text-[var(--color-text)]/90">{project.summary}</p>
                             <p className="text-sm text-[var(--color-text)]/90">{project.detail}</p>
-                            <a
-                                href="mailto:shivambpatel2121@gmail.com?subject=Project%20collaboration"
-                                className="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] bg-transparent px-4 py-2 text-sm font-semibold text-[var(--color-heading)]"
-                            >
-                                Message me about this project
-                            </a>
+                            <div className="mt-auto flex flex-wrap gap-3">
+                                <Link
+                                    href={`/projects/${project.slug}`}
+                                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-heading)] px-4 py-2 text-sm font-semibold text-white"
+                                >
+                                    View project details
+                                </Link>
+                                <a
+                                    href="mailto:shivambpatel2121@gmail.com?subject=Project%20collaboration"
+                                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] bg-transparent px-4 py-2 text-sm font-semibold text-[var(--color-heading)]"
+                                >
+                                    Message me
+                                </a>
+                            </div>
                         </article>
                     ))}
                 </div>
