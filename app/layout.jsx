@@ -1,28 +1,26 @@
 import '../styles/globals.css';
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
+import { ThemeProvider } from '../components/theme-provider';
 
 export const metadata = {
-    title: {
-        template: '%s | Netlify',
-        default: 'Netlify Starter'
-    }
+    title: 'Shivam Patel | Portfolio',
+    description:
+        'Portfolio website for Shivam Patel highlighting software engineering experience, UX research, and digital product delivery.',
+    metadataBase: new URL('https://shivam-portfolio.example.com')
 };
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
-            <head>
-                <link rel="icon" href="/favicon.svg" sizes="any" />
-            </head>
-            <body className="antialiased text-white bg-blue-900">
-                <div className="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
-                    <div className="flex flex-col w-full max-w-5xl mx-auto grow">
+        <html lang="en" suppressHydrationWarning>
+            <body className="bg-[var(--color-background)] text-[var(--color-text)]">
+                <ThemeProvider>
+                    <div className="flex min-h-screen flex-col">
                         <Header />
-                        <main className="grow">{children}</main>
+                        <main className="mx-auto w-full max-w-6xl grow px-4 py-10 sm:px-6 lg:px-8">{children}</main>
                         <Footer />
                     </div>
-                </div>
+                </ThemeProvider>
             </body>
         </html>
     );
