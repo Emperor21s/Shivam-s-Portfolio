@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import { projects } from '../data/projects';
+
 const professionalSummary =
     'Results-driven Software & UX Developer with a strong foundation in full-stack development and agile methodologies. Experienced in building responsive React and Flask applications, creating RESTful APIs backed by SQL databases, and translating research into intuitive user experiences.';
 
@@ -82,29 +85,8 @@ const experiences = [
     }
 ];
 
-const projects = [
-    {
-        name: 'Customer Booking Platform (In Progress)',
-        focus: 'Full-Stack & UX',
-        summary:
-            'Designing and building a booking experience for a Whirlpool partner, pairing Figma prototypes with a React UI and coordinating REST API integrations.',
-        detail: 'Owns usability validation, accessibility audits, and front-end implementation to maintain consistent interactions across desktop and mobile views.'
-    },
-    {
-        name: 'E-Commerce Web Application (Capstone Project)',
-        focus: 'Full-Stack Delivery',
-        summary:
-            'Built a simulated online retail experience with a Flask backend, React front-end, and MySQL database powering user accounts, products, and orders.',
-        detail: 'Designed RESTful endpoints, integrated Stripe for payments, and used Selenium + TDD to validate cart and checkout flows while refining the UI/UX in React Router.'
-    },
-    {
-        name: 'Hamilton City Magazine Event Platform',
-        focus: 'UX & Integration',
-        summary:
-            'Led UX design for a centralized event listing platform—translating client requirements into Figma mockups and intuitive navigation.',
-        detail: 'Integrated a custom Flask + MySQL backend with a WordPress front-end via an AJAX-powered plugin, enabling live search/filtering and improved accessibility.'
-    }
-];
+
+
 
 export default function HomePage() {
     return (
@@ -130,11 +112,11 @@ export default function HomePage() {
                     </div>
                     <div className="flex flex-wrap gap-4">
                         <a
-                            href="/Shivam-Patel-Resume.pdf"
+                            href="/Shivam_Patel_Resume.pdf"
                             download
                             className="btn btn-lg bg-[var(--color-accent)] text-[var(--color-on-accent)] shadow-lg shadow-[var(--color-accent)]/40"
                         >
-                            Download sample resume
+                            Download Resume
                         </a>
                         <a
                             href="mailto:shivambpatel2121@gmail.com"
@@ -262,23 +244,20 @@ export default function HomePage() {
                 </div>
                 <div className="grid gap-6 md:grid-cols-2">
                     {projects.map((project) => (
-                        <article
-                            key={project.name}
-                            className="flex h-full flex-col gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
-                        >
-                            <div>
-                                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-muted)]">{project.focus}</p>
-                                <h3 className="mt-2 text-2xl font-semibold text-[var(--color-heading)]">{project.name}</h3>
-                            </div>
-                            <p className="text-sm text-[var(--color-text)]/90">{project.summary}</p>
-                            <p className="text-sm text-[var(--color-text)]/90">{project.detail}</p>
-                            <a
-                                href="mailto:shivambpatel2121@gmail.com?subject=Project%20collaboration"
-                                className="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] bg-transparent px-4 py-2 text-sm font-semibold text-[var(--color-heading)]"
-                            >
-                                Message me about this project
-                            </a>
-                        </article>
+                        <Link key={project.slug} href={`/projects/${project.slug}`} className="no-underline">
+                            <article className="flex h-full flex-col gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition hover:-translate-y-1 hover:border-[var(--color-accent)] hover:shadow-[0_20px_50px_rgba(15,23,42,0.15)]">
+                                <div>
+                                    <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-muted)]">{project.focus}</p>
+                                    <h3 className="mt-2 text-2xl font-semibold text-[var(--color-heading)]">{project.name}</h3>
+                                </div>
+                                <p className="text-sm text-[var(--color-text)]/90">{project.summary}</p>
+                                <p className="text-sm text-[var(--color-text)]/90">{project.detail}</p>
+                                <div className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent)]">
+                                    View project details
+                                    <span aria-hidden="true">→</span>
+                                </div>
+                            </article>
+                        </Link>
                     ))}
                 </div>
             </section>
