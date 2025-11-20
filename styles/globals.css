@@ -19,17 +19,17 @@
 }
 
 :root[data-theme='dark'] {
-    --color-background: #030014;
-    --color-surface: #0f172a;
-    --color-elevated: #131c35;
-    --color-glass: rgba(3, 0, 20, 0.85);
+    --color-background: #040915;
+    --color-surface: #0c1426;
+    --color-elevated: #111a2e;
+    --color-glass: rgba(4, 9, 21, 0.9);
     --color-heading: #f8fafc;
-    --color-text: #c7d2fe;
-    --color-muted: #94a3b8;
-    --color-border: rgba(148, 163, 184, 0.25);
-    --color-accent: #38bdf8;
+    --color-text: #e2e8f0;
+    --color-muted: #b8c4d9;
+    --color-border: rgba(148, 163, 184, 0.4);
+    --color-accent: #7dd3fc;
     --color-on-accent: #04111f;
-    --color-glow-1: #38bdf8;
+    --color-glow-1: #7dd3fc;
     --color-glow-2: #22d3ee;
     --color-glow-3: #a78bfa;
 }
@@ -490,6 +490,97 @@
         border-color: color-mix(in oklab, var(--color-accent) 35%, var(--color-border));
         background: color-mix(in oklab, var(--color-elevated) 88%, transparent);
     }
+
+    .handmade-card {
+        margin-top: 0.75rem;
+        border-radius: 18px;
+        border: 1px dashed color-mix(in oklab, var(--color-border) 90%, transparent);
+        background: color-mix(in oklab, var(--color-elevated) 80%, transparent);
+        box-shadow: 0 16px 48px rgba(15, 23, 42, 0.12);
+        padding: 1rem;
+        display: grid;
+        gap: 0.85rem;
+    }
+
+    .signature-mark {
+        padding: 0.75rem;
+        border-radius: 14px;
+        background: radial-gradient(circle, color-mix(in oklab, var(--color-accent) 18%, transparent) 0%, transparent 70%);
+        border: 1px solid color-mix(in oklab, var(--color-border) 90%, transparent);
+        box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-border) 40%, transparent);
+    }
+
+    .sketch-line {
+        stroke: var(--color-heading);
+        stroke-width: 4;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.14));
+    }
+
+    .sketch-dot {
+        fill: var(--color-accent);
+    }
+
+    .social-row {
+        display: grid;
+        gap: 0.65rem;
+    }
+
+    .social-pill {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.85rem 1rem;
+        border-radius: 14px;
+        border: 1px solid color-mix(in oklab, var(--color-border) 80%, transparent);
+        background: linear-gradient(135deg, color-mix(in oklab, var(--color-surface) 82%, transparent),
+                    color-mix(in oklab, var(--color-elevated) 78%, transparent));
+        box-shadow: 0 18px 44px rgba(15, 23, 42, 0.12);
+        overflow: hidden;
+        text-decoration: none;
+        transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .social-pill:hover {
+        transform: translateY(-4px) scale(1.01);
+        border-color: color-mix(in oklab, var(--color-accent) 40%, var(--color-border));
+        box-shadow: 0 22px 60px rgba(37, 99, 235, 0.22);
+    }
+
+    .icon-wrap {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: color-mix(in oklab, var(--color-accent) 16%, transparent);
+        color: var(--color-heading);
+        box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-border) 55%, transparent);
+        animation: sparklePulse 8s ease-in-out infinite;
+    }
+
+    .social-copy {
+        display: grid;
+        gap: 0.15rem;
+    }
+
+    .pill-glow {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 12% 20%, color-mix(in oklab, var(--color-accent) 28%, transparent) 0%, transparent 50%),
+            radial-gradient(circle at 90% 30%, color-mix(in oklab, var(--color-glow-3) 24%, transparent) 0%, transparent 45%);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
+    }
+
+    .social-pill:hover .pill-glow {
+        opacity: 0.45;
+    }
 }
 
 @keyframes drift {
@@ -534,6 +625,21 @@
     50% {
         opacity: 0.55;
         transform: scale(1.02);
+    }
+}
+
+@keyframes sparklePulse {
+    0% {
+        transform: translateY(0) scale(1);
+        box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-border) 55%, transparent), 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+    50% {
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-accent) 40%, transparent), 0 18px 40px rgba(0, 0, 0, 0.16);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-border) 55%, transparent), 0 10px 30px rgba(0, 0, 0, 0.12);
     }
 }
 
