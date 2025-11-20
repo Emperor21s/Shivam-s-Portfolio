@@ -48,33 +48,33 @@ export const projects = [
         summary:
             'Designing responsive wireframes for Kardia’s Whirlpool-partnered service portal so customers can book repairs and installations with confidence.',
         detail:
-            'Mobile- and desktop-first flows for service selection, scheduling, and technician coordination — with more pages and details arriving soon.',
+            'Mobile- and desktop-first flows for service selection, scheduling, and technician coordination — actively evolving with developers as the app ships.',
         description:
-            'Current freelance engagement: shaping the end-to-end booking experience for Kardia Repairs & Installation, aligning customer needs with Whirlpool partner requirements while iterating quickly on feedback.',
+            'Current freelance engagement: shaping the end-to-end booking experience for Kardia Repairs & Installation, aligning customer needs with Whirlpool partner requirements while pairing with developers to refine the live build.',
         hero: {
             role: 'Freelance UX/UI Designer',
             timeframe: 'Feb 2025 – Present',
             tools: ['Figma', 'Responsive wireframes', 'WCAG checklist'],
-            team: 'Solo designer collaborating with Kardia stakeholders'
+            team: 'Solo designer collaborating with Kardia stakeholders and developers'
         },
         overview: {
             challenge:
                 'Customers needed a trustworthy way to request appliance service, understand coverage, and confirm technician visits without phone calls.',
             solution:
-                'Built clear service menus, streamlined booking steps, and technician handoff screens that work across devices and highlight Whirlpool partnership trust signals.',
+                'Built clear service menus, streamlined booking steps, and technician handoff screens that work across devices and highlight Whirlpool partnership trust signals; actively trimming non-essential visuals to speed delivery.',
             impact:
-                'Wireframes accelerate stakeholder buy-in and will evolve into detailed mockups as we add more service categories and admin states.'
+                'Wireframes accelerate stakeholder buy-in and will evolve into detailed mockups as we add more service categories, admin states, and developer feedback.'
         },
         mockups: [
             {
                 title: 'Service landing and CTA',
-                description: 'Hero and service tiles guide visitors to start a repair or installation request quickly.',
-                image: '/images/kardia/kardia-home.svg'
+                description: 'Home screen and hero CTA that frame the under-development booking experience.',
+                image: '/images/kardia/Home.png'
             },
             {
-                title: 'Booking and confirmation',
-                description: 'Appointment, coverage, and confirmation steps keep customers informed before a technician arrives.',
-                image: '/images/kardia/kardia-confirmation.svg'
+                title: 'Service tiles and pricing clarity',
+                description: 'Service cards, pricing, and quick starts tailored for Whirlpool’s repair and installation partnership.',
+                image: '/images/kardia/Services.png'
             }
         ]
     },
