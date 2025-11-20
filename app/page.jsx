@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { projects } from '@/data/projects';
 
 const professionalSummary =
-    'Creative and detail-oriented UI/UX Developer with experience designing and implementing user-centered web interfaces. Skilled in Figma, wireframing, prototyping, accessibility, and responsive front-end development using HTML, CSS, JavaScript, and React.';
+    'Results-driven Software Developer with a strong foundation in full-stack development and agile methodologies. Proficient in building responsive web applications using Java, Python, JavaScript (React), and Flask, with hands-on experience creating RESTful APIs and working with SQL databases.';
 
 const introduction =
-    'Comfortable working with design systems and collaborating closely with developers and stakeholders to turn complex requirements into simple, intuitive user experiences.';
+    'Creative and detail-oriented UI/UX Developer with experience designing and implementing user-centered web interfaces. Skilled in Figma, wireframing, prototyping, accessibility, and responsive front-end development using HTML, CSS, JavaScript, and React.';
 
 const contactDetails = [
     { label: 'Email', value: 'shivambpatel2121@gmail.com', href: 'mailto:shivambpatel2121@gmail.com' },
@@ -14,23 +14,23 @@ const contactDetails = [
 ];
 
 const coreSkills = [
-    'UX Design: User flows, wireframes, high-fidelity mock-ups, interactive prototypes, information architecture',
-    'UI Development: HTML5, CSS3, JavaScript (ES6+), ReactJS, responsive layouts, grid/Flexbox',
-    'Tools & Systems: Figma, Miro, Ontario Design System (ODS), Slack, Azure DevOps',
-    'Research & Accessibility: Usability testing, heuristic evaluation, accessibility best practices (WCAG/AODA)',
-    'Collaboration: Design-to-development handoff, working with engineers & PMs, Agile/Scrum ceremonies'
+    'Programming: Python, Java, JavaScript, C#, SQL, HTML5/CSS3',
+    'Frameworks & Libraries: Flask, ReactJS, RESTful API design, jQuery',
+    'Databases: MySQL, SQL Server (fundamentals)',
+    'Tools: Git & GitHub, VS Code, Postman, Azure DevOps, Linux/Unix basics',
+    'Practices: Agile/Scrum, TDD, CI/CD (basic), Object-Oriented Design'
 ];
 
 const experiences = [
     {
-        role: 'Freelance UX/UI Designer · IT Support',
-        organization: 'Kardia Repairs & Installation (Whirlpool Partner)',
+        role: 'Freelance Software Developer & IT Support',
+        organization: 'Kardia Repair & Installation (Whirlpool Partner)',
         location: 'Hamilton, ON',
         period: 'Feb 2025 – Present',
         bullets: [
-            'Leading the UX design of a customer booking website from concept to prototype: created user flows, low-fidelity wireframes, and high-fidelity Figma designs for desktop and mobile.',
-            'Built interactive prototypes to validate the booking experience and used informal usability testing with staff/customers to identify friction points and iterate on the design.',
-            'Collaborating with a small development team to implement designs using modern front-end practices (semantic HTML, responsive CSS, and React components), ensuring accessibility and visual consistency.'
+            'Leading the design and development of a customer booking web application (in progress) – created wireframes and interactive prototypes in Figma and spearheaded front-end implementation using React, ensuring a responsive, intuitive UI that aligns with business needs.',
+            'Managed the service center’s IT operations (ticketing system, scheduling, parts procurement, feedback tracking), implementing structured digital workflows that improved overall efficiency and reduced service delays.',
+            'Enhanced technician response times by streamlining issue triage and communication.'
         ]
     },
     {
@@ -39,20 +39,20 @@ const experiences = [
         location: 'St Catharines, ON',
         period: 'May 2023 – Aug 2023',
         bullets: [
-            'Redesigned legacy web forms into modern, accessible interfaces using the Ontario Design System (ODS), improving clarity, reducing cognitive load, and supporting mobile users.',
-            'Produced detailed Figma prototypes, component specifications, and design documentation to support front-end developers and maintain a consistent design language across pages.',
-            'Conducted usability testing and accessibility checks, then iterated on UI patterns to address issues (field labels, error states, contrast) and support WCAG 2.1/AODA compliance.',
-            'Collaborated in an Agile environment using Azure DevOps to manage design tasks, align with user stories, and present work regularly to stakeholders.'
+            'Designed modern, mobile-responsive web form interfaces using the Ontario Design System (ODS) and Figma, ensuring 100% WCAG 2.1 accessibility compliance and smoother user workflows based on usability testing insights.',
+            'Worked closely with front-end developers (Infosys consultants) to translate Figma prototypes into production-ready HTML, CSS, and JavaScript, ensuring pixel-perfect design implementation and cross-browser compatibility.',
+            'Utilized Microsoft Azure DevOps to manage user stories, track design deliverables, and contribute during Agile ceremonies to ensure continuous alignment with stakeholder objectives.'
         ]
     },
     {
         role: 'IT Support Officer (Tier 2)',
         organization: 'Ontario Ministry of Public and Business Service Delivery',
         location: 'Guelph, ON',
-        period: 'May 2023 – Aug 2023',
+        period: 'Sep 2022 – Dec 2022',
         bullets: [
-            'Provided end-user support that strengthened empathy, communication, and problem-solving skills used daily in UX work.',
-            'Documented common issues and solutions, reinforcing the importance of clear guidance and well-structured information for users.'
+            'Provided Tier-2 support to government staff in both on-site and remote settings, resolving diverse technical issues (hardware failures, Windows software errors, VPN connectivity problems) with a high first-contact resolution rate (85%).',
+            'Managed user accounts and access rights using Active Directory and Microsoft Intune, and deployed software updates via enterprise management tools while enforcing IT security policies.',
+            'Investigated and triaged complex issues, collaborating with network and infrastructure teams to escalate critical incidents and restore services within SLA timeframes.'
         ]
     }
 ];
@@ -99,12 +99,12 @@ export default function HomePage() {
                     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Introduction</p>
                     <p className="text-base text-[var(--color-text)]/90">{introduction}</p>
                     <p className="text-base text-[var(--color-text)]/90">
-                        Research strengths include usability testing, heuristic evaluation, accessibility best practices (WCAG/AODA),
-                        and user feedback analysis.
+                        Comfortable working with design systems and collaborating closely with developers and stakeholders to turn complex
+                        requirements into simple, intuitive user experiences.
                     </p>
                     <p className="text-base text-[var(--color-text)]/90">
-                        Collaboration focus areas: design-to-development handoff, working with engineers and PMs, Agile/Scrum ceremonies,
-                        and presenting design decisions.
+                        Known for delivering user-centric solutions and collaborating across cross-functional teams to solve complex
+                        technical problems in fast-paced environments.
                     </p>
                 </div>
             </section>
@@ -112,9 +112,7 @@ export default function HomePage() {
             <section className="space-y-8" id="skills">
                 <div className="space-y-4">
                     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Core Skills</p>
-                    <p className="text-lg text-[var(--color-text)]/90">
-                        UX Design · UI Development · Tools & Systems · Research & Accessibility · Collaboration
-                    </p>
+                    <p className="text-lg text-[var(--color-text)]/90">Programming · Frameworks · Databases · Tools · Practices</p>
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
                     {coreSkills.map((skill) => (

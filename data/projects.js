@@ -2,26 +2,26 @@ export const projects = [
     {
         href: '/projects/ecommerce-experience',
         name: 'E-Commerce Web Application (Capstone Project)',
-        focus: 'UX & Front-end Focus',
+        focus: 'Full-stack capstone',
         summary:
-            'Led UI/UX design for a full-stack e-commerce site, defining navigation structure and page layouts (home, product listing, product detail, cart, checkout).',
+            'Full-stack web app simulating an online retail store using Flask (Python) and React, with RESTful APIs and a MySQL database for accounts, product data, and orders.',
         detail:
-            'Created Figma prototypes and worked with the team to implement designs in React, focusing on responsive behavior, clear visual hierarchy, and a frictionless checkout flow.',
+            'Developed a rich UI/UX with React Router for seamless navigation, integrated Stripe API for secure payments, and used Selenium test scripts with TDD practices to ensure reliability.',
         description:
-            'This capstone initiative aimed to deliver a responsive shopping experience for desktop and mobile. I facilitated design workshops, built component libraries, and paired with developers to convert prototypes into modular React views that met accessibility checkpoints.',
+            'Capstone build focused on delivering a responsive shopping experience backed by RESTful endpoints, SQL data models, and tested payment flows.',
         hero: {
-            role: 'Lead UX/UI Designer',
-            timeframe: 'Jan – Apr 2024',
-            tools: ['Figma', 'React', 'Storybook', 'WCAG checklist'],
-            team: '5-person multidisciplinary team'
+            role: 'Developer & UX lead',
+            timeframe: 'Capstone project',
+            tools: ['Flask', 'React', 'MySQL', 'Stripe', 'Selenium'],
+            team: 'Solo project'
         },
         overview: {
             challenge:
-                'Students and alumni needed an intuitive storefront to browse dozens of program-branded products without getting lost in cluttered navigation.',
+                'Simulate an online retail store with responsive navigation and secure checkout backed by a Python and React stack.',
             solution:
-                'Designed progressive disclosure patterns, simplified the checkout path, and provided reusable card and banner components that rendered consistently in React.',
+                'Designed and implemented RESTful API endpoints, integrated MySQL for users, products, and orders, and paired the backend with React Router views.',
             impact:
-                'Usability walkthroughs showed a 35% faster path to checkout and fewer clarifying questions during testing sessions.'
+                'Stripe-powered payments and Selenium-tested flows kept the experience reliable while supporting a smooth user journey.'
         },
         mockups: [
             {
@@ -44,26 +44,26 @@ export const projects = [
     {
         href: '/projects/kardia-repairs-installation',
         name: 'Kardia Repairs & Installation – Service Booking',
-        focus: 'Freelance UX/UI Engagement',
+        focus: 'Freelance development & IT support',
         summary:
-            'Designing responsive wireframes for Kardia’s Whirlpool-partnered service portal so customers can book repairs and installations with confidence.',
+            'Leading the design and development of a customer booking web application with wireframes, interactive prototypes, and React front-end implementation.',
         detail:
-            'Mobile- and desktop-first flows for service selection, scheduling, and technician coordination — actively evolving with developers as the app ships.',
+            'Managing IT operations with structured digital workflows for ticketing, scheduling, parts procurement, and feedback tracking to reduce service delays.',
         description:
-            'Current freelance engagement: shaping the end-to-end booking experience for Kardia Repairs & Installation, aligning customer needs with Whirlpool partner requirements while pairing with developers to refine the live build.',
+            'Collaborating daily with a small developer team to deliver a responsive, intuitive booking experience while improving technician response times through streamlined communication.',
         hero: {
-            role: 'Freelance UX/UI Designer',
+            role: 'Freelance Software Developer & IT Support',
             timeframe: 'Feb 2025 – Present',
-            tools: ['Figma', 'Responsive wireframes', 'WCAG checklist'],
-            team: 'Solo designer collaborating with Kardia stakeholders and developers'
+            tools: ['Figma', 'React', 'Digital workflows'],
+            team: 'Collaborating with Kardia stakeholders and developers'
         },
         overview: {
             challenge:
-                'Customers needed a trustworthy way to request appliance service, understand coverage, and confirm technician visits without phone calls.',
+                'Create a responsive booking flow for appliance repair and installation customers backed by Whirlpool partner requirements.',
             solution:
-                'Built clear service menus, streamlined booking steps, and technician handoff screens that work across devices and highlight Whirlpool partnership trust signals; actively trimming non-essential visuals to speed delivery.',
+                'Produced wireframes and interactive prototypes, then led React front-end delivery while coordinating IT workflows across the service center.',
             impact:
-                'Wireframes accelerate stakeholder buy-in and will evolve into detailed mockups as we add more service categories, admin states, and developer feedback.'
+                'Digital workflows improved efficiency and supported faster technician response times.'
         },
         mockups: [
             {
@@ -79,60 +79,28 @@ export const projects = [
         ]
     },
     {
-        href: '/projects/couples-app',
-        name: 'Couples App – Onboarding & Journaling',
-        focus: 'Freelance UI/UX Designer',
-        summary:
-            'Redesigned onboarding and journaling experiences for a couples communication app to improve activation and navigation clarity.',
-        detail:
-            'Created a scalable design system with cohesive color palettes, typography, icons, and reusable components while delivering guided prototypes.',
-        description:
-            'Freelance engagement focused on strengthening how couples onboard, journal, and navigate together. Built flows, mockups, and prototypes that keep both partners aligned.',
-        links: [
-            {
-                label: 'View Figma case study',
-                href: 'https://www.figma.com/design/94pnTwGINQfbz0gkJKJPZu/Couples-app?node-id=0-1&p=f&t=LJL1Ro3ga6bWdt6v-0',
-                external: true
-            }
-        ],
-        hero: {
-            role: 'Freelance UI/UX Designer',
-            timeframe: '2025 – Present',
-            tools: ['Figma', 'Design system foundations', 'Prototyping'],
-            team: 'Solo designer collaborating with founders and engineers'
-        },
-        overview: {
-            challenge:
-                'The product needed clearer onboarding, guided journaling, and cleaner navigation to keep couples engaged beyond the first week.',
-            solution:
-                'Mapped onboarding milestones, restructured journal prompts with emotional check-ins, and built reusable navigation and component patterns in Figma.',
-            impact:
-                'Early feedback shows higher activation and easier developer handoff thanks to organized system documentation and prototypes that mirror the build.'
-        }
-    },
-    {
         href: '/projects/hamilton-city-magazine',
         name: 'Hamilton City Magazine – Event Discovery',
-        focus: 'Group UX Case Study',
+        focus: 'Academic project',
         summary:
-            'Co-led a 4-student group project to redesign Hamilton City Magazine’s digital event experience for faster discovery.',
+            'Collaborated in a team to build a centralized event listing platform for a local magazine with a responsive experience.',
         detail:
-            'Owned the UI architecture, visual direction, and accessibility pass while collaborating with teammates on content sourcing and QA.',
+            'Led the UX design with Figma mock-ups, translating client requirements into intuitive interface layouts backed by a custom Flask + MySQL backend.',
         description:
-            'We repositioned Hamilton City Magazine’s event hub to surface timely listings, smarter filters, and mobile-friendly cards that respect editorial photography.',
+            'Integrated a WordPress front-end via an AJAX-powered plugin for live search and filtering, streamlining event postings and improving user accessibility.',
         hero: {
-            role: 'Product Designer & Front-end Lead',
-            timeframe: 'Jan – Apr 2024',
-            tools: ['Figma', 'Next.js', 'Tailwind CSS', 'Notion'],
+            role: 'UX Designer & Front-end contributor',
+            timeframe: 'Academic project',
+            tools: ['Figma', 'Flask', 'MySQL', 'WordPress'],
             team: '4-student group project'
         },
         overview: {
             challenge:
-                'Readers struggled to locate relevant happenings because search, filters, and imagery were fragmented across pages.',
+                'Create a centralized event listing platform that keeps browsing simple for local readers.',
             solution:
-                'Unified the experience into a single responsive flow with prominent categories, inline filters, and seamless search states.',
+                'Built Figma mock-ups and paired them with Flask + MySQL services and a WordPress plugin to provide live search and filtering.',
             impact:
-                'Prototype reviews with peers showed clearer navigation, faster event saves, and consistent presentation of magazine photography.'
+                'The solution streamlined event postings and improved user accessibility for the magazine audience.'
         },
         mockups: [
             {
