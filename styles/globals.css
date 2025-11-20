@@ -292,6 +292,151 @@
         z-index: 1;
     }
 
+    .stacked-section {
+        position: relative;
+        isolation: isolate;
+    }
+
+    .stacked-section::after {
+        content: '';
+        position: absolute;
+        inset: -12px;
+        border-radius: 32px;
+        background: radial-gradient(circle at 20% 20%, color-mix(in oklab, var(--color-accent) 18%, transparent) 0%, transparent 36%),
+            radial-gradient(circle at 80% 10%, color-mix(in oklab, var(--color-glow-3) 16%, transparent) 0%, transparent 32%);
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .stacked-section:hover::after {
+        opacity: 0.45;
+    }
+
+    .animated-section {
+        opacity: 0;
+        animation: fadeInUp 0.9s ease forwards;
+        animation-delay: 0.08s;
+    }
+
+    .animated-card {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .animated-section,
+        .animated-card {
+            opacity: 1;
+            animation: none;
+        }
+    }
+
+    .masonry-grid {
+        column-count: 1;
+        column-gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+        .masonry-grid {
+            column-count: 2;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .masonry-grid {
+            column-count: 3;
+        }
+    }
+
+    .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 1.25rem;
+    }
+
+    .project-card {
+        backdrop-filter: blur(12px);
+        overflow: hidden;
+        background: linear-gradient(135deg, color-mix(in oklab, var(--color-surface) 80%, transparent),
+                    color-mix(in oklab, var(--color-elevated) 72%, transparent));
+        box-shadow: 0 26px 60px rgba(15, 23, 42, 0.12);
+    }
+
+    .project-card::after {
+        content: '';
+        position: absolute;
+        inset: -20% 10% auto auto;
+        height: 180px;
+        width: 180px;
+        background: radial-gradient(circle, color-mix(in oklab, var(--color-accent) 32%, transparent) 0%, transparent 60%);
+        opacity: 0.3;
+        filter: blur(16px);
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        z-index: 0;
+    }
+
+    .project-card:hover::after {
+        opacity: 0.5;
+        transform: translateY(-6px) scale(1.05);
+    }
+
+    .project-card .glow-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        padding: 0.35rem 0.65rem;
+        background: linear-gradient(135deg, color-mix(in oklab, var(--color-accent) 30%, transparent),
+                    color-mix(in oklab, var(--color-heading) 10%, transparent));
+        color: var(--color-on-accent);
+        font-weight: 700;
+        font-size: 0.85rem;
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.22);
+    }
+
+    .project-cta {
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn-ghost {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-ghost::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, color-mix(in oklab, #ffffff 18%, transparent), transparent);
+        opacity: 0;
+        transform: translateX(-30%);
+        transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .btn-ghost:hover::before {
+        opacity: 0.35;
+        transform: translateX(10%);
+    }
+
+    .btn-ghost:hover {
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .btn-outline {
+        transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-outline:hover {
+        transform: translateY(-1px);
+        border-color: color-mix(in oklab, var(--color-accent) 30%, var(--color-border));
+        color: var(--color-heading);
+    }
+
     .floating-chip {
         display: inline-flex;
         align-items: center;
@@ -389,5 +534,18 @@
     50% {
         opacity: 0.55;
         transform: scale(1.02);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(6px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
     }
 }
