@@ -79,6 +79,48 @@ export const projects = [
         ]
     },
     {
+        href: '/projects/couples-app',
+        name: 'Couples App – Onboarding & Journaling',
+        focus: 'Freelance UI/UX Designer',
+        summary:
+            'Redesigned onboarding and journaling experiences for a couples communication app to improve activation and navigation clarity.',
+        detail:
+            'Created a scalable design system with cohesive color palettes, typography, icons, and reusable components while delivering guided prototypes.',
+        description:
+            'Freelance engagement focused on strengthening how couples onboard, journal, and navigate together. Built flows, mockups, and prototypes that keep both partners aligned.',
+        hero: {
+            role: 'Freelance UI/UX Designer',
+            timeframe: '2025 – Present',
+            tools: ['Figma', 'Design system foundations', 'Prototyping'],
+            team: 'Solo designer collaborating with founders and engineers'
+        },
+        overview: {
+            challenge:
+                'The product needed clearer onboarding, guided journaling, and cleaner navigation to keep couples engaged beyond the first week.',
+            solution:
+                'Mapped onboarding milestones, restructured journal prompts with emotional check-ins, and built reusable navigation and component patterns in Figma.',
+            impact:
+                'Early feedback shows higher activation and easier developer handoff thanks to organized system documentation and prototypes that mirror the build.'
+        },
+        mockups: [
+            {
+                title: 'Guided onboarding',
+                description: 'Value-focused onboarding screens with shared goals, check-ins, and expectation setting.',
+                image: '/images/couples/onboarding.svg'
+            },
+            {
+                title: 'Journaling flow',
+                description: 'Structured journal prompts with emotional check-ins to encourage regular reflection as a pair.',
+                image: '/images/couples/journaling.svg'
+            },
+            {
+                title: 'Design system',
+                description: 'Color palettes, typography scales, icons, and reusable components ready for developer handoff.',
+                image: '/images/couples/design-system.svg'
+            }
+        ]
+    },
+    {
         href: '/projects/hamilton-city-magazine',
         name: 'Hamilton City Magazine – Event Discovery',
         focus: 'Group UX Case Study',
@@ -116,7 +158,7 @@ export const projects = [
                 image: '/images/hamiltoncitymagazine/scapercategory.png'
             }
         ]
-    },
+    }
 ];
 
 export const getProjectByHref = (href) => projects.find((project) => project.href === href);
