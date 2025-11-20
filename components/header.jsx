@@ -7,7 +7,9 @@ import { useTheme } from './theme-provider';
 const links = [
     { label: 'Home', href: '#home' },
     { label: 'Resume', href: '#resume' },
-    { label: 'Projects', href: '#projects' }
+    { label: 'Projects', href: '#projects' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shivam2102', external: true },
+    { label: 'GitHub', href: 'https://github.com/Emperor21s', external: true }
 ];
 
 export function Header() {
@@ -15,16 +17,29 @@ export function Header() {
     const { theme, toggleTheme } = useTheme();
 
     const renderLinks = (onClick) =>
-        links.map((link) => (
-            <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium tracking-wide transition hover:text-[var(--color-accent)]"
-                onClick={onClick}
-            >
-                {link.label}
-            </Link>
-        ));
+        links.map((link) =>
+            link.external ? (
+                <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-medium tracking-wide transition hover:text-[var(--color-accent)]"
+                    onClick={onClick}
+                >
+                    {link.label}
+                </a>
+            ) : (
+                <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-medium tracking-wide transition hover:text-[var(--color-accent)]"
+                    onClick={onClick}
+                >
+                    {link.label}
+                </Link>
+            )
+        );
 
     return (
         <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-glass)] backdrop-blur">
