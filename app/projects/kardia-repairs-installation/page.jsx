@@ -21,6 +21,18 @@ const kardiaWireframeStages = [
         description: 'Grid of repair and installation options with pricing notes and filters.'
     },
     {
+        key: 'pricing',
+        matchers: ['pricing'],
+        title: 'Transparent pricing',
+        description: 'Clear callouts for offers, bundles, and service costs across devices.'
+    },
+    {
+        key: 'about',
+        matchers: ['about'],
+        title: 'Trust-building story',
+        description: 'Highlights Kardia’s Whirlpool partnership and support promise.'
+    },
+    {
         key: 'booking',
         matchers: ['booking', 'appointment', 'form'],
         title: 'Booking details',
@@ -80,7 +92,7 @@ export default function KardiaRepairsInstallationPage() {
 
     const featuredMockups = wireframes.length > 0 ? wireframes.slice(0, 2) : project.mockups;
     const wireframesNote =
-        'Freelance engagement for Kardia; more service categories, admin tools, and high-fidelity pages will be added soon.';
+        'In-progress app built in collaboration with Kardia developers; additional service categories, admin tools, and fidelity updates are shipping next.';
 
     return (
         <ProjectDetail
