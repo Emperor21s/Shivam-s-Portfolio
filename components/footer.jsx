@@ -12,7 +12,7 @@ export function Footer() {
                     <a href="https://www.linkedin.com/in/shivampatel2003" target="_blank" rel="noreferrer" className="font-medium text-[var(--color-text)] hover:text-[var(--color-accent)]">
                         LinkedIn
                     </a>
-                    <a href="https://github.com/" target="_blank" rel="noreferrer" className="font-medium text-[var(--color-text)] hover:text-[var(--color-accent)]">
+                    <a href="https://github.com/shivampatel2003" target="_blank" rel="noreferrer" className="font-medium text-[var(--color-text)] hover:text-[var(--color-accent)]">
                         GitHub
                     </a>
                 </div>

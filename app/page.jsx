@@ -13,6 +13,23 @@ const contactDetails = [
     { label: 'Location', value: 'Hamilton, ON' }
 ];
 
+const socialLinks = [
+    {
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/shivampatel2003',
+        handle: 'linkedin.com/in/shivampatel2003',
+        description: 'Weekly UX breakdowns & community updates',
+        icon: <LinkedInIcon />
+    },
+    {
+        label: 'GitHub',
+        href: 'https://github.com/shivampatel2003',
+        handle: 'github.com/shivampatel2003',
+        description: 'Live prototypes, motion handoff, and code notes',
+        icon: <GithubIcon />
+    }
+];
+
 const highlightStats = [
     { value: '18+', label: 'UX case studies', detail: 'Product launches, redesigns, and concept sprints' },
     { value: '5', label: 'Design systems', detail: 'Component libraries with accessibility baked in' },
@@ -110,6 +127,45 @@ export default function HomePage() {
                             >
                                 Message me
                             </a>
+                        </div>
+                        <div className="handmade-card">
+                            <div className="flex items-start gap-4">
+                                <div className="signature-mark" aria-hidden="true">
+                                    <svg viewBox="0 0 120 80" className="h-16 w-20" role="presentation">
+                                        <path
+                                            d="M10 54c18-12 36-18 56-12 8 2 16 8 22 6 6-2 11-12 12-20"
+                                            className="sketch-line"
+                                        />
+                                        <path d="M18 36c6-12 22-22 38-18" className="sketch-line" />
+                                        <circle cx="94" cy="20" r="3" className="sketch-dot" />
+                                    </svg>
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">
+                                        Hand-drawn then coded
+                                    </p>
+                                    <p className="text-base text-[var(--color-text)]/95">
+                                        Every flow starts in my sketchbook and is built by me—no AI shortcuts—so you see the same personality from pencil line to production code.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="social-row">
+                                {socialLinks.map((social) => (
+                                    <a key={social.label} href={social.href} className="social-pill" target="_blank" rel="noreferrer">
+                                        <span className="icon-wrap" aria-hidden="true">
+                                            {social.icon}
+                                        </span>
+                                        <span className="social-copy">
+                                            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted)]">
+                                                {social.label}
+                                            </span>
+                                            <span className="text-sm font-semibold text-[var(--color-heading)]">{social.handle}</span>
+                                            <span className="text-xs text-[var(--color-text)]/80">{social.description}</span>
+                                        </span>
+                                        <span className="pill-glow" aria-hidden="true" />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div className="interactive-card space-y-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-elevated)]/70 p-6">
@@ -299,5 +355,29 @@ export default function HomePage() {
                 </div>
             </section>
         </div>
+    );
+}
+
+function LinkedInIcon() {
+    return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5">
+            <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="1.6" />
+            <path d="M7 10.5v6" strokeWidth="1.6" strokeLinecap="round" />
+            <path d="M7 7.5a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1Z" strokeWidth="1.6" strokeLinecap="round" />
+            <path d="M12 16.5v-3.8c0-1.3.8-2.2 2.05-2.2 1.2 0 1.95.9 1.95 2.2v3.8" strokeWidth="1.6" strokeLinecap="round" />
+        </svg>
+    );
+}
+
+function GithubIcon() {
+    return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5">
+            <path
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.3a2.87 2.87 0 0 0-.8-2.2c2.6-.3 5.3-1.3 5.3-6a4.6 4.6 0 0 0-1.2-3.2 4.3 4.3 0 0 0-.1-3.1s-1-.3-3.3 1.2a11.4 11.4 0 0 0-6 0C6.6 4 5.6 4.2 5.6 4.2a4.3 4.3 0 0 0-.1 3.1A4.6 4.6 0 0 0 4.3 11c0 4.6 2.7 5.7 5.3 6a2.87 2.87 0 0 0-.8 2.2V22"
+            />
+        </svg>
     );
 }
