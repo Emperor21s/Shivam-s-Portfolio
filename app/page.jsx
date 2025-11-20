@@ -72,7 +72,7 @@ const experiences = [
 export default function HomePage() {
     return (
         <div className="space-y-16" id="home">
-            <section className="relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.15)] md:p-12">
+            <section className="stacked-section animated-section relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.15)] md:p-12">
                 <div className="pulse-ring" aria-hidden />
                 <div className="grid items-center gap-12 md:grid-cols-2">
                     <div className="space-y-6">
@@ -148,7 +148,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section className="space-y-8" id="skills">
+            <section className="stacked-section animated-section space-y-8" id="skills">
                 <div className="interactive-card space-y-4 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-6">
                     <div className="flex flex-wrap items-center gap-3">
                         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">Core Skills</p>
@@ -175,7 +175,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section className="space-y-10" id="resume">
+            <section className="stacked-section animated-section space-y-10" id="resume">
                 <div className="space-y-4">
                     <div className="inline-flex items-center gap-3 rounded-full bg-[var(--color-elevated)]/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)] ring-1 ring-[var(--color-border)]">
                         <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" aria-hidden="true" /> Resume
@@ -222,37 +222,54 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section className="space-y-10" id="projects">
+            <section className="stacked-section animated-section space-y-10" id="projects">
                 <div className="space-y-4">
                     <div className="inline-flex items-center gap-3 rounded-full bg-[var(--color-elevated)]/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)] ring-1 ring-[var(--color-border)]">
                         <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" aria-hidden="true" /> Projects
                     </div>
                     <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Recent project collaborations</h2>
                 </div>
-                <div className="grid gap-6 md:grid-cols-2">
-                    {projects.map((project) => (
+                <div className="masonry-grid">
+                    {projects.map((project, index) => (
                         <article
                             key={project.name}
-                            className="interactive-card flex h-full flex-col gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]"
+                            style={{ animationDelay: `${index * 80}ms` }}
+                            className="masonry-item animated-card project-card interactive-card flex h-full flex-col gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]"
                         >
-                            <div>
-                                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-muted)]">{project.focus}</p>
-                                <h3 className="mt-2 text-2xl font-semibold text-[var(--color-heading)]">{project.name}</h3>
+                            <div className="flex items-start justify-between gap-4">
+                                <div className="space-y-2">
+                                    <p className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elevated)]/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-[var(--color-muted)] ring-1 ring-[var(--color-border)]">
+                                        <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" aria-hidden />
+                                        {project.focus}
+                                    </p>
+                                    <h3 className="text-2xl font-semibold leading-tight text-[var(--color-heading)]">{project.name}</h3>
+                                </div>
+                                <span className="glow-badge">{String(index + 1).padStart(2, '0')}</span>
                             </div>
-                            <p className="text-sm text-[var(--color-text)]/90">{project.summary}</p>
-                            <p className="text-sm text-[var(--color-text)]/90">{project.detail}</p>
-                            <div className="mt-auto flex flex-wrap gap-3">
+                            <div className="space-y-2 text-sm text-[var(--color-text)]/90">
+                                <p className="font-semibold text-[var(--color-heading)]/90">{project.summary}</p>
+                                <p>{project.detail}</p>
+                                {project.hero?.timeframe && (
+                                    <p className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)]/10 px-3 py-1 text-[12px] font-semibold text-[var(--color-heading)] ring-1 ring-[var(--color-border)]">
+                                        <span aria-hidden className="h-2 w-2 rounded-full bg-[var(--color-accent)]" />
+                                        {project.hero.timeframe}
+                                    </p>
+                                )}
+                            </div>
+                            <div className="project-cta mt-auto grid gap-3 sm:grid-cols-2">
                                 <Link
                                     href={project.href}
-                                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-heading)] px-4 py-2 text-sm font-semibold text-white"
+                                    className="btn-ghost inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-heading)] px-4 py-2 text-sm font-semibold text-white"
                                 >
                                     View project details
+                                    <span aria-hidden>↗</span>
                                 </Link>
                                 <a
                                     href="mailto:shivambpatel2121@gmail.com?subject=Project%20collaboration"
-                                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] bg-transparent px-4 py-2 text-sm font-semibold text-[var(--color-heading)]"
+                                    className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] bg-transparent px-4 py-2 text-sm font-semibold text-[var(--color-heading)]"
                                 >
                                     Message me
+                                    <span aria-hidden>✦</span>
                                 </a>
                             </div>
                         </article>
@@ -260,7 +277,7 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <section className="interactive-card rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/90 p-8 text-center">
+            <section className="stacked-section animated-section interactive-card rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/90 p-8 text-center">
                 <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-muted)]">Let’s connect</p>
                 <h2 className="mt-4 text-3xl font-semibold text-[var(--color-heading)]">Ready to discuss your next UX or front-end need?</h2>
                 <p className="mx-auto mt-4 max-w-2xl text-base text-[var(--color-text)]/90">
