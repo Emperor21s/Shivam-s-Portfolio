@@ -1,7 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function ProjectDetail({ project, wireframesHeading, wireframesDescription, wireframesNote, wireframes = [] }) {
+export default function ProjectDetail({
+    project,
+    mockups = project.mockups ?? [],
+    wireframesHeading,
+    wireframesDescription,
+    wireframesNote,
+    wireframes = []
+}) {
     return (
         <div className="space-y-16" id="project-details">
             <section className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/90 p-8 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
@@ -63,7 +70,7 @@ export default function ProjectDetail({ project, wireframesHeading, wireframesDe
                     </p>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2">
-                    {project.mockups.map((mockup) => (
+                    {mockups.map((mockup) => (
                         <article key={mockup.title} className="space-y-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
                             <div className="relative h-64 w-full overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900">
                                 <Image
