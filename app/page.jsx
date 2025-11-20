@@ -85,13 +85,13 @@ export default function HomePage() {
                             download
                             className="btn btn-lg bg-[var(--color-accent)] text-[var(--color-on-accent)] shadow-lg shadow-[var(--color-accent)]/40"
                         >
-                            Download sample resume
+                            Download Resume
                         </a>
                         <a
                             href="mailto:shivambpatel2121@gmail.com"
                             className="btn btn-lg bg-transparent text-[var(--color-heading)] ring-1 ring-[var(--color-border)]"
                         >
-                            Message me
+                             Send Email
                         </a>
                     </div>
                 </div>
@@ -159,13 +159,13 @@ export default function HomePage() {
                 </div>
                 <div className="rounded-2xl border border-dashed border-[var(--color-border)] bg-[var(--color-elevated)]/60 p-6 text-sm text-[var(--color-text)]/90">
                     <p className="font-semibold text-[var(--color-heading)]">Resume file</p>
-                    <p className="mt-2">Download the sample resume to keep an offline copy.</p>
+                    <p className="mt-2">Please Download my Resume for your Reference.</p>
                     <a
                         href="/Shivam-Patel-Resume.pdf"
                         download
                         className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--color-heading)] px-5 py-2 text-white"
                     >
-                        Sample resume (PDF)
+                         Resume (PDF)
                         <span aria-hidden="true">↓</span>
                     </a>
                 </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
                                     href="mailto:shivambpatel2121@gmail.com?subject=Project%20collaboration"
                                     className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-border)] bg-transparent px-4 py-2 text-sm font-semibold text-[var(--color-heading)]"
                                 >
-                                    Message me
+                                    Send Email
                                 </a>
                             </div>
                         </article>
@@ -218,7 +218,7 @@ export default function HomePage() {
                         href="mailto:shivambpatel2121@gmail.com"
                         className="inline-flex items-center gap-2 rounded-full bg-[var(--color-heading)] px-6 py-3 font-semibold text-white"
                     >
-                        Message me
+                        Send Email
                     </a>
                     <a
                         href="tel:+14168365054"
