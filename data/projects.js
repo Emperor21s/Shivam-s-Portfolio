@@ -42,6 +42,45 @@ export const projects = [
         ]
     },
     {
+        href: '/projects/hamilton-city-magazine',
+        name: 'Hamilton City Magazine – Event Discovery',
+        focus: 'Group UX Case Study',
+        summary:
+            'Co-led a 4-student group project to redesign Hamilton City Magazine’s digital event experience for faster discovery.',
+        detail:
+            'Owned the UI architecture, visual direction, and accessibility pass while collaborating with teammates on content sourcing and QA.',
+        description:
+            'We repositioned Hamilton City Magazine’s event hub to surface timely listings, smarter filters, and mobile-friendly cards that respect editorial photography.',
+        hero: {
+            role: 'Product Designer & Front-end Lead',
+            timeframe: 'Jan – Apr 2024',
+            tools: ['Figma', 'Next.js', 'Tailwind CSS', 'Notion'],
+            team: '4-student group project'
+        },
+        overview: {
+            challenge:
+                'Readers struggled to locate relevant happenings because search, filters, and imagery were fragmented across pages.',
+            solution:
+                'Unified the experience into a single responsive flow with prominent categories, inline filters, and seamless search states.',
+            impact:
+                'Prototype reviews with peers showed clearer navigation, faster event saves, and consistent presentation of magazine photography.'
+        },
+        mockups: [
+            {
+                title: 'Homepage discovery',
+                description:
+                    'Author: Shivam Patel — Magazine landing balances featured events with quick-save controls and editorial highlights.',
+                image: '/images/hamiltoncitymagazine/scaperhome.png'
+            },
+            {
+                title: 'Category and filter system',
+                description:
+                    'Author: Shivam Patel — Category browsing and filter drawers keep listings responsive for mobile readers.',
+                image: '/images/hamiltoncitymagazine/scapercategory.png'
+            }
+        ]
+    },
+    {
         href: '/projects/hamilton-city-events',
         name: 'Hamilton City Magazine Event Platform',
         focus: 'UX for Client’s Site',
