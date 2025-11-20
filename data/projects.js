@@ -88,6 +88,13 @@ export const projects = [
             'Created a scalable design system with cohesive color palettes, typography, icons, and reusable components while delivering guided prototypes.',
         description:
             'Freelance engagement focused on strengthening how couples onboard, journal, and navigate together. Built flows, mockups, and prototypes that keep both partners aligned.',
+        links: [
+            {
+                label: 'View Figma case study',
+                href: 'https://www.figma.com/design/94pnTwGINQfbz0gkJKJPZu/Couples-app?node-id=0-1&p=f&t=LJL1Ro3ga6bWdt6v-0',
+                external: true
+            }
+        ],
         hero: {
             role: 'Freelance UI/UX Designer',
             timeframe: '2025 – Present',
@@ -101,24 +108,7 @@ export const projects = [
                 'Mapped onboarding milestones, restructured journal prompts with emotional check-ins, and built reusable navigation and component patterns in Figma.',
             impact:
                 'Early feedback shows higher activation and easier developer handoff thanks to organized system documentation and prototypes that mirror the build.'
-        },
-        mockups: [
-            {
-                title: 'Guided onboarding',
-                description: 'Value-focused onboarding screens with shared goals, check-ins, and expectation setting.',
-                image: '/images/couples/onboarding.svg'
-            },
-            {
-                title: 'Journaling flow',
-                description: 'Structured journal prompts with emotional check-ins to encourage regular reflection as a pair.',
-                image: '/images/couples/journaling.svg'
-            },
-            {
-                title: 'Design system',
-                description: 'Color palettes, typography scales, icons, and reusable components ready for developer handoff.',
-                image: '/images/couples/design-system.svg'
-            }
-        ]
+        }
     },
     {
         href: '/projects/hamilton-city-magazine',

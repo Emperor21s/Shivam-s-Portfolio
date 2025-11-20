@@ -4,6 +4,7 @@ import Link from 'next/link';
 export default function ProjectDetail({
     project,
     mockups = project.mockups ?? [],
+    links = project.links ?? [],
     wireframesHeading,
     wireframesDescription,
     wireframesNote,
@@ -18,12 +19,26 @@ export default function ProjectDetail({
                         <h1 className="text-3xl font-semibold text-[var(--color-heading)]">{project.name}</h1>
                         <p className="max-w-3xl text-base text-[var(--color-text)]/90">{project.description}</p>
                     </div>
-                    <Link
-                        href="/#projects"
-                        className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-semibold text-[var(--color-heading)]"
-                    >
-                        ← Back to all projects
-                    </Link>
+                    <div className="flex flex-wrap items-center gap-3">
+                        {links.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-semibold text-[var(--color-heading)] transition hover:border-[var(--color-heading)] hover:text-[var(--color-heading)]"
+                                target={link.external ? '_blank' : undefined}
+                                rel={link.external ? 'noreferrer' : undefined}
+                            >
+                                {link.label}
+                                {link.external ? '↗' : null}
+                            </Link>
+                        ))}
+                        <Link
+                            href="/#projects"
+                            className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-semibold text-[var(--color-heading)]"
+                        >
+                            ← Back to all projects
+                        </Link>
+                    </div>
                 </div>
                 <div className="mt-8 grid gap-4 text-sm text-[var(--color-text)]/80 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-elevated)]/60 p-4">
@@ -60,35 +75,37 @@ export default function ProjectDetail({
                 </div>
             </section>
 
-            <section className="space-y-8">
-                <div className="space-y-3">
-                    <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-muted)]">Mockups</p>
-                    <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Key interface moments</h2>
-                    <p className="text-base text-[var(--color-text)]/90">
-                        High-fidelity mockups illustrate the experience in desktop and mobile contexts while keeping accessibility
-                        at the forefront.
-                    </p>
-                </div>
-                <div className="grid gap-6 md:grid-cols-2">
-                    {mockups.map((mockup) => (
-                        <article key={mockup.title} className="space-y-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
-                            <div className="relative h-64 w-full overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900">
-                                <Image
-                                    src={mockup.image}
-                                    alt={mockup.title}
-                                    fill
-                                    sizes="(min-width: 768px) 50vw, 100vw"
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <h3 className="text-xl font-semibold text-[var(--color-heading)]">{mockup.title}</h3>
-                                <p className="text-sm text-[var(--color-text)]/90">{mockup.description}</p>
-                            </div>
-                        </article>
-                    ))}
-                </div>
-            </section>
+            {mockups.length > 0 && (
+                <section className="space-y-8">
+                    <div className="space-y-3">
+                        <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-muted)]">Mockups</p>
+                        <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Key interface moments</h2>
+                        <p className="text-base text-[var(--color-text)]/90">
+                            High-fidelity mockups illustrate the experience in desktop and mobile contexts while keeping accessibility
+                            at the forefront.
+                        </p>
+                    </div>
+                    <div className="grid gap-6 md:grid-cols-2">
+                        {mockups.map((mockup) => (
+                            <article key={mockup.title} className="space-y-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
+                                <div className="relative h-64 w-full overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900">
+                                    <Image
+                                        src={mockup.image}
+                                        alt={mockup.title}
+                                        fill
+                                        sizes="(min-width: 768px) 50vw, 100vw"
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-semibold text-[var(--color-heading)]">{mockup.title}</h3>
+                                    <p className="text-sm text-[var(--color-text)]/90">{mockup.description}</p>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </section>
+            )}
 
             {wireframes.length > 0 && (
                 <section className="space-y-8">
