@@ -10,50 +10,80 @@ import ProjectDetail from '../ProjectDetail';
 const ecommerceWireframeStages = [
     {
         key: 'sign-up',
-        matchers: ['sign-up', 'signup', 'sign_up', 'register'],
+        matchers: ['sign-up', 'signup', 'sign_up', 'register', 'sign up'],
         title: 'Sign up',
-        description: 'Account creation entry point with minimal required fields and password helpers.'
-    },
-    {
-        key: 'sign-in',
-        matchers: ['sign-in', 'signin', 'sign_in', 'login'],
-        title: 'Sign in',
-        description: 'Returning shopper authentication with obvious password reset and single CTA placement.'
+        description: 'Account creation with required profile fields so shoppers can authenticate and save activity.'
     },
     {
         key: 'home',
-        matchers: ['home', 'landing'],
+        matchers: ['home page', 'homepage', 'home'],
         title: 'Home',
-        description: 'Landing feed that spotlights featured categories and search entry points.'
+        description: 'Landing feed surfacing featured items, quick search, and clear category entry points.'
     },
     {
-        key: 'catalog',
-        matchers: ['catalog', 'listing', 'browse'],
-        title: 'Product listing',
-        description: 'Grid layout illustrating filter placement, product cards, and pagination controls.'
+        key: 'search',
+        matchers: ['search', 'searchreport'],
+        title: 'Search and insights',
+        description: 'Search results paired with quick filters and reporting shortcuts for admins.'
     },
     {
         key: 'product',
-        matchers: ['product', 'detail', 'pdp'],
-        title: 'Product detail',
-        description: 'Detail page wireframe with gallery, variant selectors, and anchored add-to-cart.'
+        matchers: ['itemdescription', 'item description', 'itemdescription (2)', 'detailscrud'],
+        title: 'Item detail',
+        description: 'Detailed product page with imagery, specs, and clear add-to-cart actions.'
+    },
+    {
+        key: 'catalog',
+        matchers: ['items', 'category', 'crud', 'add-update', 'itemdropdown'],
+        title: 'Inventory management',
+        description: 'Admin tooling to add, update, categorize, and review inventory items.'
     },
     {
         key: 'cart',
-        matchers: ['cart', 'bag', 'basket'],
+        matchers: ['cart', 'multipleitemscart'],
         title: 'Cart',
-        description: 'Cart summary showing editable quantities, savings messaging, and checkout CTA.'
+        description: 'Cart summary with item quantities, totals, and next-step prompts.'
     },
     {
-        key: 'checkout',
-        matchers: ['checkout', 'payment'],
+        key: 'payment',
+        matchers: ['payment', 'checkout'],
         title: 'Checkout',
-        description: 'Step-based checkout covering address, delivery, and payment confirmation.'
+        description: 'Payment confirmation with billing details and order overview.'
+    },
+    {
+        key: 'orders',
+        matchers: ['orders'],
+        title: 'Orders',
+        description: 'Order management screen showing statuses and fulfillment actions.'
+    },
+    {
+        key: 'sales',
+        matchers: ['sales', 'salespage'],
+        title: 'Sales dashboards',
+        description: 'Sales snapshots highlighting revenue, top products, and trends.'
+    },
+    {
+        key: 'reports',
+        matchers: ['reports', 'reportshomepage'],
+        title: 'Reports',
+        description: 'Report library for drilling into purchase patterns and inventory health.'
+    },
+    {
+        key: 'profile',
+        matchers: ['userprofile', 'profile'],
+        title: 'User profile',
+        description: 'Profile screen summarizing saved details, addresses, and preferences.'
+    },
+    {
+        key: 'admin-home',
+        matchers: ['admin homepage', 'adminhomepage'],
+        title: 'Admin home',
+        description: 'Admin landing page spotlighting shortcuts to catalog, orders, and analytics.'
     }
 ];
 
 function loadEcommerceWireframes() {
-    const directory = path.join(process.cwd(), 'public', 'images', 'eccomerce');
+    const directory = path.join(process.cwd(), 'public', 'images', 'ecommerce');
     if (!fs.existsSync(directory)) {
         return [];
     }
@@ -63,6 +93,7 @@ function loadEcommerceWireframes() {
         .filter((file) => /\.(png|jpe?g|svg|webp)$/i.test(file));
 
     return files
+        .filter((file) => !file.toLowerCase().includes('erd'))
         .map((file) => {
             const filename = file.toLowerCase();
             const stage = ecommerceWireframeStages.find((option) => option.matchers.some((match) => filename.includes(match)));
@@ -70,7 +101,7 @@ function loadEcommerceWireframes() {
             return {
                 title: stage?.title ?? 'Wireframe',
                 description: stage?.description ?? 'Experience wireframe supporting the shopper journey.',
-                image: `/images/eccomerce/${file}`,
+                image: `/images/ecommerce/${encodeURIComponent(file)}`,
                 orderIndex: stage ? ecommerceWireframeStages.indexOf(stage) : ecommerceWireframeStages.length
             };
         })
@@ -87,8 +118,7 @@ export default function EcommerceExperiencePage() {
     if (!project) {
         notFound();
     }
-    const wireframesNote =
-        'Concept for a responsive clothing storefront with wishlists, customer authentication, and simple admin tools to maintain the catalog.';
+    const wireframesNote = 'Screens captured from the live JSX pages that power the storefront and admin experience.';
 
     return (
         <ProjectDetail

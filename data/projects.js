@@ -25,33 +25,21 @@ export const projects = [
         },
         mockups: [
             {
-                title: 'Responsive storefront',
-                description: 'Hero messaging and featured categories adapt from a 12-column desktop grid to stacked mobile cards while retaining contrast and accessible type ramp.',
-                image: '/images/projects/ecommerce-mockup.svg'
+                title: 'Home page',
+                description: 'Landing experience highlighting featured items, calls to action, and quick category shortcuts.',
+                image: '/images/ecommerce/Home%20Page.png'
             },
             {
-                title: 'Product detail & cart states',
-                description: 'Detailed view illustrates variant selectors, trust badges, and anchored cart summary that stays visible for desktop and collapses into a drawer on mobile.',
-                image: '/images/projects/ecommerce-cart.svg'
-            }
-        ],
-        gallery: [
-            {
-                title: 'Component inventory',
-                caption: 'Color, elevation, and spacing tokens documented for engineers.',
-                image: '/images/projects/ecommerce-components.svg'
+                title: 'Item detail',
+                description: 'Product detail template with full description, key specs, and add-to-cart controls.',
+                image: '/images/ecommerce/itemdescription.png'
             },
             {
-                title: 'Interaction storyboard',
-                caption: 'Click-path storyboard aligning the React router structure with user intentions.',
-                image: '/images/projects/ecommerce-storyboard.svg'
+                title: 'Cart & checkout',
+                description: 'Cart summary and checkout states showing totals, payment inputs, and confirmation.',
+                image: '/images/ecommerce/Cart.png'
             }
-        ],
-        diagram: {
-            title: 'Checkout journey diagram',
-            description: 'Swimlane diagram mapping shopper intents to UI states and API events to reduce friction near payment.',
-            image: '/images/projects/ecommerce-flow.svg'
-        }
+        ]
     },
     {
         href: '/projects/hamilton-city-events',
@@ -88,24 +76,7 @@ export const projects = [
                 description: 'Overlay filter sheet with category chips, date pickers, and map previews for location-based browsing.',
                 image: '/images/projects/hcm-filters.svg'
             }
-        ],
-        gallery: [
-            {
-                title: 'Editorial calendar preview',
-                caption: 'Adaptive calendar panel syncing with the CMS schedule.',
-                image: '/images/projects/hcm-calendar.svg'
-            },
-            {
-                title: 'Partner highlight block',
-                caption: 'Modular ad slot ensuring sponsor visibility without interrupting the browsing flow.',
-                image: '/images/projects/hcm-sponsor.svg'
-            }
-        ],
-        diagram: {
-            title: 'Discovery flow diagram',
-            description: 'Diagram showing awareness, browse, evaluate, and RSVP stages with associated UI modules.',
-            image: '/images/projects/hcm-diagram.svg'
-        }
+        ]
     },
     {
         href: '/projects/hamilton-handoff',
@@ -142,24 +113,7 @@ export const projects = [
                 description: 'Table of hover, focus, and error states for buttons, cards, and filter chips to support accessible theming.',
                 image: '/images/projects/handoff-states.svg'
             }
-        ],
-        gallery: [
-            {
-                title: 'Design token handoff',
-                caption: 'Color variables exported as CSS custom properties for WordPress blocks.',
-                image: '/images/projects/handoff-tokens.svg'
-            },
-            {
-                title: 'QA checklist',
-                caption: 'Sequenced acceptance criteria for each sprint review.',
-                image: '/images/projects/handoff-qa.svg'
-            }
-        ],
-        diagram: {
-            title: 'Implementation lifecycle diagram',
-            description: 'Circular diagram representing plan → build → review → learn loops shared with the team.',
-            image: '/images/projects/handoff-diagram.svg'
-        }
+        ]
     }
 ];
 
