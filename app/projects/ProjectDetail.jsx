@@ -112,55 +112,6 @@ export default function ProjectDetail({ project, wireframesHeading, wireframesDe
                     </div>
                 </section>
             )}
-
-            <section className="space-y-6">
-                <div className="space-y-3">
-                    <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-muted)]">Diagram</p>
-                    <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Experience architecture</h2>
-                    <p className="text-base text-[var(--color-text)]/90">{project.diagram.description}</p>
-                </div>
-                <div className="overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]">
-                    <div className="relative h-96 w-full">
-                        <Image
-                            src={project.diagram.image}
-                            alt={project.diagram.title}
-                            fill
-                            sizes="100vw"
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="p-6">
-                        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-muted)]">{project.diagram.title}</p>
-                    </div>
-                </div>
-            </section>
-
-            <section className="space-y-8">
-                <div className="space-y-3">
-                    <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-muted)]">Gallery</p>
-                    <h2 className="text-3xl font-semibold text-[var(--color-heading)]">Supporting visuals</h2>
-                    <p className="text-base text-[var(--color-text)]/90">Artifacts that supported stakeholder discussions, development handoff, and QA.</p>
-                </div>
-                <div className="grid gap-6 md:grid-cols-2">
-                    {project.gallery.map((frame) => (
-                        <article key={frame.title} className="space-y-3 rounded-2xl border border-[var(--color-border)] bg-[var(--color-elevated)]/60 p-4">
-                            <div className="relative h-56 w-full overflow-hidden rounded-xl">
-                                <Image
-                                    src={frame.image}
-                                    alt={frame.title}
-                                    fill
-                                    sizes="(min-width: 768px) 50vw, 100vw"
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-semibold text-[var(--color-heading)]">{frame.title}</h3>
-                                <p className="text-sm text-[var(--color-text)]/90">{frame.caption}</p>
-                            </div>
-                        </article>
-                    ))}
-                </div>
-            </section>
         </div>
     );
 }
