@@ -1,0 +1,19 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0b1224" offset="0%"/>
+      <stop stop-color="#1e293b" offset="50%"/>
+      <stop stop-color="#f97316" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg5)" rx="32"/>
+  <text x="90" y="120" fill="#e2e8f0" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="30">Technician dashboard wireframe</text>
+  <rect x="80" y="150" width="1040" height="420" rx="24" fill="#0b1224" stroke="#cbd5e1" stroke-dasharray="12 10" opacity="0.95"/>
+  <text x="110" y="200" fill="#94a3b8" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Technician queue with route cards, contact info, and appointment statuses.</text>
+  <rect x="110" y="230" width="960" height="80" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="2" opacity="0.9"/>
+  <text x="130" y="280" fill="#cbd5e1" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Morning schedule · 3 visits · map preview</text>
+  <rect x="110" y="330" width="460" height="190" rx="16" fill="#111827" stroke="#cbd5e1" stroke-dasharray="8 8" opacity="0.9"/>
+  <text x="130" y="370" fill="#cbd5e1" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">Visit cards with reschedule + call options</text>
+  <rect x="610" y="330" width="460" height="190" rx="16" fill="#111827" stroke="#cbd5e1" stroke-dasharray="8 8" opacity="0.9"/>
+  <text x="630" y="370" fill="#cbd5e1" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">Metrics and technician availability</text>
+</svg>

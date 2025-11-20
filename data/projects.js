@@ -42,6 +42,43 @@ export const projects = [
         ]
     },
     {
+        href: '/projects/kardia-repairs-installation',
+        name: 'Kardia Repairs & Installation – Service Booking',
+        focus: 'Freelance UX/UI Engagement',
+        summary:
+            'Designing responsive wireframes for Kardia’s Whirlpool-partnered service portal so customers can book repairs and installations with confidence.',
+        detail:
+            'Mobile- and desktop-first flows for service selection, scheduling, and technician coordination — with more pages and details arriving soon.',
+        description:
+            'Current freelance engagement: shaping the end-to-end booking experience for Kardia Repairs & Installation, aligning customer needs with Whirlpool partner requirements while iterating quickly on feedback.',
+        hero: {
+            role: 'Freelance UX/UI Designer',
+            timeframe: 'Feb 2025 – Present',
+            tools: ['Figma', 'Responsive wireframes', 'WCAG checklist'],
+            team: 'Solo designer collaborating with Kardia stakeholders'
+        },
+        overview: {
+            challenge:
+                'Customers needed a trustworthy way to request appliance service, understand coverage, and confirm technician visits without phone calls.',
+            solution:
+                'Built clear service menus, streamlined booking steps, and technician handoff screens that work across devices and highlight Whirlpool partnership trust signals.',
+            impact:
+                'Wireframes accelerate stakeholder buy-in and will evolve into detailed mockups as we add more service categories and admin states.'
+        },
+        mockups: [
+            {
+                title: 'Service landing and CTA',
+                description: 'Hero and service tiles guide visitors to start a repair or installation request quickly.',
+                image: '/images/kardia/kardia-home.svg'
+            },
+            {
+                title: 'Booking and confirmation',
+                description: 'Appointment, coverage, and confirmation steps keep customers informed before a technician arrives.',
+                image: '/images/kardia/kardia-confirmation.svg'
+            }
+        ]
+    },
+    {
         href: '/projects/hamilton-city-magazine',
         name: 'Hamilton City Magazine – Event Discovery',
         focus: 'Group UX Case Study',

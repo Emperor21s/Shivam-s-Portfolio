@@ -1,0 +1,21 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0b1224" offset="0%"/>
+      <stop stop-color="#1e293b" offset="40%"/>
+      <stop stop-color="#16a34a" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg2)" rx="32"/>
+  <text x="90" y="120" fill="#e2e8f0" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="30">Service selection wireframe</text>
+  <rect x="80" y="150" width="1040" height="420" rx="24" fill="#0b1224" stroke="#cbd5e1" stroke-dasharray="12 10" opacity="0.95"/>
+  <text x="110" y="200" fill="#94a3b8" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Grid of appliance services with pricing chips and eligibility notes.</text>
+  <rect x="110" y="230" width="300" height="70" rx="12" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="140" y="275" fill="#cbd5e1" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Dishwasher repair</text>
+  <rect x="440" y="230" width="300" height="70" rx="12" fill="#111827" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
+  <text x="470" y="275" fill="#cbd5e1" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Washer install</text>
+  <rect x="770" y="230" width="300" height="70" rx="12" fill="#111827" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
+  <text x="800" y="275" fill="#cbd5e1" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Dryer tune-up</text>
+  <rect x="110" y="320" width="880" height="40" rx="10" fill="#111827" stroke="#cbd5e1" stroke-dasharray="8 8" opacity="0.9"/>
+  <text x="130" y="347" fill="#cbd5e1" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">Inline filters for urgency, warranty coverage, and Whirlpool partner badge</text>
+</svg>

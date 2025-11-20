@@ -1,0 +1,22 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0f172a" offset="0%"/>
+      <stop stop-color="#334155" offset="50%"/>
+      <stop stop-color="#8b5cf6" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg3)" rx="32"/>
+  <text x="90" y="120" fill="#e2e8f0" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="30">Booking flow wireframe</text>
+  <rect x="80" y="150" width="1040" height="420" rx="24" fill="#0b1224" stroke="#cbd5e1" stroke-dasharray="12 10" opacity="0.95"/>
+  <text x="110" y="200" fill="#94a3b8" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Form captures appliance details, address, preferred time, and proof of purchase.</text>
+  <rect x="110" y="230" width="480" height="60" rx="12" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="130" y="270" fill="#cbd5e1" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Contact information</text>
+  <rect x="110" y="310" width="480" height="60" rx="12" fill="#111827" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
+  <text x="130" y="350" fill="#cbd5e1" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif">Appointment selection</text>
+  <rect x="620" y="230" width="470" height="200" rx="18" fill="#111827" stroke="#cbd5e1" stroke-dasharray="8 8" opacity="0.9"/>
+  <text x="640" y="270" fill="#cbd5e1" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">Progress tracker</text>
+  <text x="640" y="300" fill="#94a3b8" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">1. Service</text>
+  <text x="640" y="330" fill="#94a3b8" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">2. Details</text>
+  <text x="640" y="360" fill="#94a3b8" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">3. Review</text>
+</svg>
